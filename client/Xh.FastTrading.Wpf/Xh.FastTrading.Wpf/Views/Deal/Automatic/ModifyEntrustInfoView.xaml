@@ -1,0 +1,76 @@
+﻿<Window x:Class="Xh.FastTrading.Wpf.Views.Deal.Automatic.ModifyEntrustInfoView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.Deal.Automatic"
+      mc:Ignorable="d"
+      DataContext="{Binding Source={StaticResource Locator},Path=autoMatic}"
+      WindowStyle="ThreeDBorderWindow"
+      ResizeMode ="CanMinimize"
+      WindowState="Normal"
+     Height="600"
+     Width="529">
+    <Grid  Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"   Margin="10,-3,0,27" Width="500">
+            <TextBlock Text="修改委托计划信息" FontSize="20" Foreground="Gray"/>
+            <Border BorderBrush="LightGray" BorderThickness="1" Margin="0,10,0,0"/>
+            <ScrollViewer Height="450" BorderBrush="Gray"  BorderThickness="0" Margin="10,0" Style="{StaticResource for_scrollviewer}"  VerticalScrollBarVisibility="Auto" >
+                <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Stretch"  Orientation="Vertical" Width="510" >
+                    <TextBox x:Name="txtSecuritiesCode" Tag="证券代码" Style="{StaticResource TextBoxStyle}" 
+                                  FontSize="17"
+                                  Foreground="LightGray" 
+                                  VerticalContentAlignment="Top" 
+                                  Margin="0,30,0,0"
+                                  BorderThickness="0,0,0,1"
+                                  Text="{Binding SelectedRow.SecuritiesCode}"/>
+                    <TextBlock Text="买卖方向" FontSize="13" Foreground="Gray" Margin="0 10 0 0"/>
+                    <ComboBox x:Name="cmbDirection" 
+                              FontSize="17" 
+                              Foreground="LightGray" 
+                              SelectedIndex="0"
+                              ItemsSource="{Binding Path=BuySellType}"
+                              SelectedItem="{Binding Path=SbuySellType}"
+                              DisplayMemberPath="Name">
+                    </ComboBox>
+                    <TextBlock Text="最小间隔" FontSize="13" Foreground="Gray" Margin="0 10 0 0"/>
+                    <TextBox x:Name="txtMinSpace"  FontSize="17" Text="{Binding SelectedRow.MinInterval}" Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="最大间隔" FontSize="13" Foreground="Gray" Margin="0 10 0 0"/>
+                    <TextBox x:Name="txtMaxSpace"   FontSize="17" Text="{Binding SelectedRow.MaxInterval}" Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="最小数量" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <TextBox  x:Name="txtMinNumber" FontSize="17" Text="{Binding SelectedRow.MinAmount}"  Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="最大数量" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <TextBox x:Name="txtMaxNumber" FontSize="17" Text="{Binding SelectedRow.MaxAmount}" Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="价格类型" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <ComboBox x:Name="cmbType" 
+                              FontSize="17" 
+                              Foreground="Gray"
+                              SelectedIndex="1"
+                              ItemsSource="{Binding Path=PriceType}"
+                              SelectedItem="{Binding Path=SPriceType}"
+                              DisplayMemberPath="PriceName">
+                    </ComboBox>
+                    <TextBlock Text="最低限价" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <TextBox x:Name="txtLowPrice"  FontSize="17" Text="{Binding SelectedRow.MinPrice}" Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="最高限价" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <TextBox x:Name="txtHighPrice"  FontSize="17" Text="{Binding SelectedRow.HighestPrice}" Foreground="LightGray" Style="{StaticResource TextBoxStyle}" VerticalContentAlignment="Top" />
+                    <TextBlock Text="主账号" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <ComboBox x:Name="txtAccount"  FontSize="17" Text="{Binding SelectedRow.Account}"/>
+                    <Border BorderBrush="LightGray" BorderThickness="1" />
+                    <TextBlock Text="数量限制" FontSize="13" Foreground="Gray" Margin="0 8 0 0"/>
+                    <TextBox x:Name="txtNumberlimit"  FontSize="17" Text="{Binding SelectedRow.AmountLimit}" Style="{StaticResource TextBoxStyle}" Foreground="LightGray" VerticalContentAlignment="Top" />
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" Margin=" 0 -12"  >
+            <Button  Content="取 消" x:Name="btCancel" Click="btCancel_Click" Style="{StaticResource BtnInfoStyle}" Foreground="White" HorizontalAlignment="Left"   Background="#00BCD4" Width="90" />
+            <Button  Content="确 定" x:Name="btnModify" Click="btnModify_Click"  Foreground="White" Style="{StaticResource BtnInfoStyle}"  HorizontalAlignment="Right"  Background="#FF9EBF" Width="90" Margin="10 0" />
+        </StackPanel>
+    </Grid>
+
+</Window>

@@ -1,0 +1,14 @@
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\UpdateConsole.exe.config
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\UpdateConsole.exe
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\UpdateConsole.pdb
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\AutoUpdate.exe
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\AutoUpdate.pdb
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\AutoUpdate.exe.config
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\obj\Debug\UpdateConsole.csprojAssemblyReference.cache
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\obj\Debug\UpdateConsole.csproj.CoreCompileInputs.cache
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\obj\Debug\UpdateConsole.csproj.CopyComplete
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\obj\Debug\UpdateConsole.exe
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\obj\Debug\UpdateConsole.pdb
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zhouh\source\repos\AutoUpdate.Net\UpdateConsole\bin\Debug\Newtonsoft.Json.xml

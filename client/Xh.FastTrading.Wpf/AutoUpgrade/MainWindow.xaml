@@ -1,0 +1,38 @@
+﻿<Window x:Class="AutoUpgrade.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoUpgrade"
+        mc:Ignorable="d"
+        Title="自动升级" Height="230" Width="500" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" FontSize="14" Icon="upgrade.ico">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="当前版本：" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF666666"/>
+        <TextBlock x:Name="txtCurrent" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Column="1"/>
+        <Label Content="最新版本：" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF666666" Grid.Column="2"/>
+        <TextBlock x:Name="txtLast" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Column="3"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="4" Background="LightBlue" />
+        <Label Content="更新数量：" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF666666" Grid.Row="2"/>
+        <TextBlock x:Name="txtCount" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <Label Content="更新大小：" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Foreground="#FF666666" Grid.Row="2"/>
+        <TextBlock x:Name="txtSize" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
+        <Border Grid.Row="3" Grid.ColumnSpan="4" Background="LightBlue" />
+        <ProgressBar x:Name="psbProgress" Grid.Row="5" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Width="450" Height="20" Margin="10, 0"/>
+        <TextBlock x:Name="txtInfo" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="4" Grid.Row="7"/>
+    </Grid>
+</Window>

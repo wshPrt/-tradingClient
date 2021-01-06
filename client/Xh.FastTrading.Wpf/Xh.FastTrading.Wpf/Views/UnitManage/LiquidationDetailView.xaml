@@ -1,0 +1,76 @@
+﻿<Metro:UserControl x:Class="Xh.FastTrading.Wpf.Views.UnitManage.LiquidationDetailView"
+              xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage"
+             mc:Ignorable="d"
+             Style="{DynamicResource UserControl_Shadow}" >
+    <Metro:UserControl.Resources>
+        <Style x:Key="BtnInfoStyle" TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#43a9c7"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <TextBlock Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF4081"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF4081"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Metro:UserControl.Resources>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical"  VerticalAlignment="Top" Margin="10,10,0,0">
+            <Button Content="保存" Background="#FF4081" Foreground="White" Style="{StaticResource BtnInfoStyle}" Width="100" Margin="-980,0,0,0"/>
+            <Label Content="自动平仓服务状态:" FontSize="18" Height="40" Margin="0,10,0,0"/>
+            <TextBox  Tag="停止" Style="{StaticResource TextBoxStyle}" Height="30" FontSize="18" Width="1080"/>
+            <Label Content="不自动平仓的单元列表(从左侧列表至右侧列表):" FontSize="18" Height="40" Margin="0,10,0,0"/>
+            <TextBox  Tag="请输入搜索内容" Style="{StaticResource TextBoxStyle}" Height="30" Foreground="Gray" FontSize="18" Width="390" Margin="-680,0,0,0"/>
+            <TextBox  Tag="请输入搜索内容" Style="{StaticResource TextBoxStyle}" Height="30" Foreground="Gray" FontSize="18" Width="390" Margin="680,-30,0,0"/>
+        </StackPanel>
+
+        <StackPanel Width="440" HorizontalAlignment="Left" VerticalAlignment="Top"  Orientation="Horizontal" Margin="10,228,0,0" Height="201">
+            <TextBox Width="415" BorderBrush="Gray" BorderThickness="1" Margin="0,0,0,-0.2" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.137"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.531"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Width="233" HorizontalAlignment="Left" VerticalAlignment="Top"  Orientation="Vertical"  Margin="427,300,0,0" Height="201">
+            <Button Content="全选" Background="LightGray" Foreground="Black" Style="{StaticResource BtnInfoStyle}" Width="110" />
+            <Button Content="全清" Background="LightGray" Foreground="Black" Style="{StaticResource BtnInfoStyle}" Width="110" Margin="0,10,0,0"/>
+        </StackPanel>
+        <StackPanel Width="440" HorizontalAlignment="Left" VerticalAlignment="Top"  Orientation="Horizontal" Margin="700,228,0,0" Height="201">
+            <TextBox Width="415" BorderBrush="Gray" BorderThickness="1" Margin="0,0,0,-0.2" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.137"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.531"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </StackPanel>
+    </Grid>
+</Metro:UserControl>

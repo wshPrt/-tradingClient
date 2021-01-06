@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01D68DFC-DACA-4D68-9068-B8EB4E8A2FC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Xh.FastTrading.Wpf</RootNamespace>
+    <AssemblyName>Sup-Trade</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Common\Images\LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.6\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.5\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="HQ, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HQ.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lierda.WPFHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cbb49eab16984ff2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lierda.WPFHelper.1.0.3\lib\net462\Lierda.WPFHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.4.3\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.office.interop.excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Common\DLLL\microsoft.office.interop.excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.2\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.2\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.2\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.2\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Panuon.UI.Silver, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Panuon.UI.Silver.1.1.3\lib\net45\Panuon.UI.Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\Commands\AnotherCommandImplementation.cs" />
+    <Compile Include="Common\Commands\Base\BaseOperation.cs" />
+    <Compile Include="Common\Commands\CommandTool.cs" />
+    <Compile Include="Common\Commands\DelegateCommand.cs" />
+    <Compile Include="Common\Commands\DelegateCommandStart.cs" />
+    <Compile Include="Common\Commands\IniFile\Configuration.cs" />
+    <Compile Include="Common\Commands\IniFile\IniFiles.cs" />
+    <Compile Include="Common\Commands\LoginCommad.cs" />
+    <Compile Include="Common\Commands\MD5Poxy\CEncoder.cs" />
+    <Compile Include="Common\Commands\PasswordBoxHelper.cs" />
+    <Compile Include="Common\Commands\ScrollViewerExtensions.cs" />
+    <Compile Include="Common\Commands\ServiceResponse.cs" />
+    <Compile Include="Common\Commands\ViewModelBase.cs" />
+    <Compile Include="Common\Commands\WindowExt.cs" />
+    <Compile Include="Common\Commands\WindowExtension.cs" />
+    <Compile Include="Common\Commands\WindowManager.cs" />
+    <Compile Include="Common\AESCrypt.cs" />
+    <Compile Include="Common\CommonHelper\CommonHelper.cs" />
+    <Compile Include="Common\Converters\ValueConverter.cs" />
+    <Compile Include="Common\CreateUserInfoHelper.cs" />
+    <Compile Include="Common\Dialog\DialogClosingEventArgs.cs" />
+    <Compile Include="Common\Dialog\DialogClosingEventHandler.cs" />
+    <Compile Include="Common\Dialog\DialogHost.cs" />
+    <Compile Include="Common\Dialog\DialogHostEx.cs" />
+    <Compile Include="Common\Dialog\DialogOpenedEventArgs.cs" />
+    <Compile Include="Common\Dialog\DialogOpenedEventHandler.cs" />
+    <Compile Include="Common\Dialog\DialogSession.cs" />
+    <Compile Include="Common\Dialog\Extensions.cs" />
+    <Compile Include="Common\Dialog\ShadowAssist.cs" />
+    <Compile Include="Common\Dialog\ShadowConverter.cs" />
+    <Compile Include="Common\Dialog\ShadowInfo.cs" />
+    <Compile Include="Common\Dialog\SnackbarMessageQueue.cs" />
+    <Compile Include="Common\Dialog\SnackbarMessageQueueItem.cs" />
+    <Compile Include="Common\InterFace\Deal\IAutomaticAddInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IAutomaticEnableDisableInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IAutomaticInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IAutomaticModifyInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealAppointAccountInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealAppointInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealBuyInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealCancelOrderInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealDeleteInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IDealSellInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IMaxBuyNumberInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IMaxSellNumberInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IUnitCapitalInterface.cs" />
+    <Compile Include="Common\InterFace\Deal\IUnitPositionInterface.cs" />
+    <Compile Include="Common\InterFace\Query\IAssetsInterface.cs" />
+    <Compile Include="Common\InterFace\Query\ICapitalFlowInterface.cs" />
+    <Compile Include="Common\InterFace\Query\IDealRecordInterface.cs" />
+    <Compile Include="Common\InterFace\Query\IEntrustRecordInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IAddMarginInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IAddMidStrategInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IDelUnitIterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IEntrustAbnormalScrapListInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IMidStrategyInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IModifyMidStrategyInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IPositionSummaryInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\ISetFrozenRationInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\ISettlementInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\ISysOutDealIntoUnitInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IUnitListAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UnitManage\IWithinOutDealSummaryInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAccountDetailInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAccountFilterListInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAccountPoolLimitSettingInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAccountPoolInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAccountPositionListInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAddAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAddAccountPoolInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\ICancelLimitInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\ICancelTradeInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IDelAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IDelAccountPoolInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IDelInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IDelUserInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IFunctionPowerInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\ILimitInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\ILimitTradingAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IModifyAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IModifyAccountPoolInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IModifyUserInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IOpenClosePauseResumeInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IOpenClosingInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IOpenClosingPauseResumeInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IPositionTransferInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IPowerSettingUserInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IResetPwdInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IRevStopInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IStartStopInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\ISyschronousAccountInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IUnitNameFilterInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IUnitPowerInterface.cs" />
+    <Compile Include="Common\NetWork\GetIP.cs" />
+    <Compile Include="Common\Untils\AutoUpgrade.cs" />
+    <Compile Include="Common\Untils\BaseWindow.cs" />
+    <Compile Include="Common\Untils\DialogCloser.cs" />
+    <Compile Include="Common\Untils\ExceptionLibrary.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\HttpWebResponseUtility.cs" />
+    <Compile Include="Common\Converters\Converter.cs" />
+    <Compile Include="Common\Converters\EffectBehavior.cs" />
+    <Compile Include="Common\Converters\VisibilityConverter.cs" />
+    <Compile Include="Common\InterFace\SignIn\ILoginInterface.cs" />
+    <Compile Include="Common\InterFace\SignIn\ILogOffInterface.cs" />
+    <Compile Include="Common\InterFace\SignIn\IModifyPwdInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IAddUserlistInterface.cs" />
+    <Compile Include="Common\InterFace\UserManage\IUserlistInterface.cs" />
+    <Compile Include="Common\NetWork\INetWorkServices.cs" />
+    <Compile Include="Common\NetWork\NetWorkDataResult.cs" />
+    <Compile Include="Common\NetWork\NetWorkDataResultBase.cs" />
+    <Compile Include="Common\Untils\Configuration.cs" />
+    <Compile Include="Common\Untils\ExportExcel.cs" />
+    <Compile Include="Common\Untils\INI.cs" />
+    <Compile Include="Common\Untils\MessageDialogManager.cs" />
+    <Compile Include="Common\Untils\SignalrRequest.cs" />
+    <Compile Include="Common\Untils\Uninstall.cs" />
+    <Compile Include="Common\Untils\Urls.cs" />
+    <Compile Include="Common\Untils\WindowCloseBehaviour.cs" />
+    <Compile Include="Common\Untils\WindowManager.cs" />
+    <Compile Include="Common\UserParam.cs" />
+    <Compile Include="ViewModel\Deal\AppointVM.cs" />
+    <Compile Include="ViewModel\Deal\AutoMaticVM.cs" />
+    <Compile Include="ViewModel\Deal\BuyingVM.cs" />
+    <Compile Include="ViewModel\Deal\CancelOrderVM.cs" />
+    <Compile Include="ViewModel\Deal\SellVM.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Query\AsetsVM.cs" />
+    <Compile Include="ViewModel\Query\CapitalFlowVM.cs" />
+    <Compile Include="ViewModel\Query\DealRecordVM.cs" />
+    <Compile Include="ViewModel\Query\EntrustRecordVM.cs" />
+    <Compile Include="ViewModel\RiskManage\MidStrategyVM.cs" />
+    <Compile Include="ViewModel\Sign\SignInViewModel.cs" />
+    <Compile Include="ViewModel\SystemManage\AccountDetailPoolVM.cs" />
+    <Compile Include="ViewModel\SystemManage\AccountDetailVM.cs" />
+    <Compile Include="ViewModel\SystemManage\AccountPositionVM.cs" />
+    <Compile Include="ViewModel\SystemManage\OpenClosingVM.cs" />
+    <Compile Include="ViewModel\SystemManage\PositionTransferVM.cs" />
+    <Compile Include="ViewModel\SystemManage\UserManageDetailVM.cs" />
+    <Compile Include="ViewModel\SystemManage\UserManageUnitFunctionPowerVM.cs" />
+    <Compile Include="ViewModel\SystemManage\ValidateExceptionVM.cs" />
+    <Compile Include="ViewModel\UnitManage\EntrustSummaryVM.cs" />
+    <Compile Include="ViewModel\UnitManage\PositionSummaryVM.cs" />
+    <Compile Include="ViewModel\UnitManage\SysOutDealSummaryVM.cs" />
+    <Compile Include="ViewModel\UnitManage\SysWithinDealSummaryVM.cs" />
+    <Compile Include="ViewModel\UnitManage\UnitListVM.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Views\CustomMessageDialog.xaml.cs">
+      <DependentUpon>CustomMessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Appoint\SpecifyDetailedView.xaml.cs">
+      <DependentUpon>SpecifyDetailedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Appoint\SpecifyUnitView.xaml.cs">
+      <DependentUpon>SpecifyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Automatic\AutoMaticDetailView.xaml.cs">
+      <DependentUpon>AutoMaticDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Automatic\AutoMaticUnitView.xaml.cs">
+      <DependentUpon>AutoMaticUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Automatic\EntrustInfoView.xaml.cs">
+      <DependentUpon>EntrustInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Automatic\ModifyEntrustInfoView.xaml.cs">
+      <DependentUpon>ModifyEntrustInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Bonds\BackDetailView.xaml.cs">
+      <DependentUpon>BackDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Bonds\BackUnitView.xaml.cs">
+      <DependentUpon>BackUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Buy\BuyDealView.xaml.cs">
+      <DependentUpon>BuyDealView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Buy\BuyDetailedView.xaml.cs">
+      <DependentUpon>BuyDetailedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Buy\BuyPurchaseView.xaml.cs">
+      <DependentUpon>BuyPurchaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Buy\BuyUnitView.xaml.cs">
+      <DependentUpon>BuyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Cancel\CancelDetailView.xaml.cs">
+      <DependentUpon>CancelDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Cancel\CancelUnitView.xaml.cs">
+      <DependentUpon>CancelUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Sell\SellDealView.xaml.cs">
+      <DependentUpon>SellDealView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Sell\SellDetailView.xaml.cs">
+      <DependentUpon>SellDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Sell\SellPurchaseView.xaml.cs">
+      <DependentUpon>SellPurchaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deal\Sell\SellUint.xaml.cs">
+      <DependentUpon>SellUint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\StartStopMsgBoxView.xaml.cs">
+      <DependentUpon>StartStopMsgBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignInView.xaml.cs">
+      <DependentUpon>SignInView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountAddInfoView.xaml.cs">
+      <DependentUpon>AccountAddInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountDetailView.xaml.cs">
+      <DependentUpon>AccountDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountInfoView.xaml.cs">
+      <DependentUpon>AccountInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountLimitSettingView.xaml.cs">
+      <DependentUpon>AccountLimitSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountLimitView.xaml.cs">
+      <DependentUpon>AccountLimitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountManageDetailView.xaml.cs">
+      <DependentUpon>AccountManageDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountManageUnitView.xaml.cs">
+      <DependentUpon>AccountManageUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountModifyInfoView.xaml.cs">
+      <DependentUpon>AccountModifyInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountPositionDetailView.xaml.cs">
+      <DependentUpon>AccountPositionDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountPositionUnitView.xaml.cs">
+      <DependentUpon>AccountPositionUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountUnitView.xaml.cs">
+      <DependentUpon>AccountUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\DividendsDetailView.xaml.cs">
+      <DependentUpon>DividendsDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\DividendsUnitView.xaml.cs">
+      <DependentUpon>DividendsUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\AccountInfoModifyView.xaml.cs">
+      <DependentUpon>AccountInfoModifyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\ModifyPasswordView.xaml.cs">
+      <DependentUpon>ModifyPasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\OpenCloseDetailView.xaml.cs">
+      <DependentUpon>OpenCloseDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\OpenCloseUnitView.xaml.cs">
+      <DependentUpon>OpenCloseUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\SystemSettingView.xaml.cs">
+      <DependentUpon>SystemSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\TransferDetailView.xaml.cs">
+      <DependentUpon>TransferDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\TransferUnitView.xaml.cs">
+      <DependentUpon>TransferUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageAccountPowerView.xaml.cs">
+      <DependentUpon>UserManageAccountPowerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageModifyUserInfoView.xaml.cs">
+      <DependentUpon>UserManageModifyUserInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageResetPasswordView.xaml.cs">
+      <DependentUpon>UserManageResetPasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageUnitFunctionPowerView.xaml.cs">
+      <DependentUpon>UserManageUnitFunctionPowerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageUnitPowerView.xaml.cs">
+      <DependentUpon>UserManageUnitPowerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UnlockView.xaml.cs">
+      <DependentUpon>UnlockView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageDetailView.xaml.cs">
+      <DependentUpon>UserManageDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageUnitView.xaml.cs">
+      <DependentUpon>UserManageUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemManage\UserManageUserInfoView.xaml.cs">
+      <DependentUpon>UserManageUserInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AbnormalCancelDetailView.xaml.cs">
+      <DependentUpon>AbnormalCancelDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AbnormalCancelUnitView.xaml.cs">
+      <DependentUpon>AbnormalCancelUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AbnormalEntrustDetailView.xaml.cs">
+      <DependentUpon>AbnormalEntrustDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AbnormalEntrustUnitView.xaml.cs">
+      <DependentUpon>AbnormalEntrustUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\AssetsDetailView.xaml.cs">
+      <DependentUpon>AssetsDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\AssetsUnitView.xaml.cs">
+      <DependentUpon>AssetsUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\CapitalDetailView.xaml.cs">
+      <DependentUpon>CapitalDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\CapitalUnitView.xaml.cs">
+      <DependentUpon>CapitalUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\DealDetailView.xaml.cs">
+      <DependentUpon>DealDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\DealUnitView.xaml.cs">
+      <DependentUpon>DealUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\EntrustDetailView.xaml.cs">
+      <DependentUpon>EntrustDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AddBondTrategyUnitView.xaml.cs">
+      <DependentUpon>AddBondTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AddExceptionPoolInformationView.xaml.cs">
+      <DependentUpon>AddExceptionPoolInformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AddLimitRuleInfoView.xaml.cs">
+      <DependentUpon>AddLimitRuleInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\AddTrategyUnitView.xaml.cs">
+      <DependentUpon>AddTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\BanDetailView.xaml.cs">
+      <DependentUpon>BanDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\BanUnitView.xaml.cs">
+      <DependentUpon>BanUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\CopyTrategyUnitView.xaml.cs">
+      <DependentUpon>CopyTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\EntrustSummaryDetailView.xaml.cs">
+      <DependentUpon>EntrustSummaryDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\EntrustSummaryUnitView.xaml.cs">
+      <DependentUpon>EntrustSummaryUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Query\EntrustUnitView.xaml.cs">
+      <DependentUpon>EntrustUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MsgBoxView.xaml.cs">
+      <DependentUpon>MsgBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\FreezingRatioTrategyUnitView.xaml.cs">
+      <DependentUpon>FreezingRatioTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\LiquidationDetailView.xaml.cs">
+      <DependentUpon>LiquidationDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\LiquidationUnitView.xaml.cs">
+      <DependentUpon>LiquidationUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\ModifyTrategyUnitView.xaml.cs">
+      <DependentUpon>ModifyTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\PositionDetailView.xaml.cs">
+      <DependentUpon>PositionDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\PositionUnitView.xaml.cs">
+      <DependentUpon>PositionUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RiskControl\RiskStrategyDetailView.xaml.cs">
+      <DependentUpon>RiskStrategyDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RiskControl\RiskStrategyUnitView.xaml.cs">
+      <DependentUpon>RiskStrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\ReduceBondTrategyUnitView.xaml.cs">
+      <DependentUpon>ReduceBondTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\RuleDetailView.xaml.cs">
+      <DependentUpon>RuleDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\RuleUnitView.xaml.cs">
+      <DependentUpon>RuleUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\SystemDealDetailView.xaml.cs">
+      <DependentUpon>SystemDealDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\SystemDealOutDetailView.xaml.cs">
+      <DependentUpon>SystemDealOutDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\SystemDealOutUnitView.xaml.cs">
+      <DependentUpon>SystemDealOutUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\SystemDealUnitView.xaml.cs">
+      <DependentUpon>SystemDealUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\TipsTrategyUnitView.xaml.cs">
+      <DependentUpon>TipsTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\TurnIntoCapitalView.xaml.cs">
+      <DependentUpon>TurnIntoCapitalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\TurnOutCapitalView.xaml.cs">
+      <DependentUpon>TurnOutCapitalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\UnitTrategyDetailView.xaml.cs">
+      <DependentUpon>UnitTrategyDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\UnitTrategyUnitView.xaml.cs">
+      <DependentUpon>UnitTrategyUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\UserManageUnitPower.xaml.cs">
+      <DependentUpon>UserManageUnitPower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\VoidDetailView.xaml.cs">
+      <DependentUpon>VoidDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnitManage\VoidUnitView.xaml.cs">
+      <DependentUpon>VoidUnitView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Common\Dialog\MaterialDesignTheme.Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Appoint\SpecifyDetailedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Appoint\SpecifyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Automatic\AutoMaticDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Automatic\AutoMaticUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Automatic\EntrustInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Automatic\ModifyEntrustInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Deal\Bonds\BackDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Bonds\BackUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Buy\BuyDealView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Buy\BuyDetailedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Buy\BuyPurchaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Buy\BuyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Cancel\CancelDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Cancel\CancelUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Sell\SellDealView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Sell\SellDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Sell\SellPurchaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Deal\Sell\SellUint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Query\StartStopMsgBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\GridSplitter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\MaterialDesignTheme.MahApps.Dialogs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\ScrollBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\TextBoxBaseDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\Themes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\CustomMessageDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SignInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountAddInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountLimitSettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SystemManage\AccountLimitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SystemManage\AccountManageDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountManageUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountModifyInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountPositionDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountPositionUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\DividendsDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\DividendsUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\AccountInfoModifyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\ModifyPasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\OpenCloseDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\OpenCloseUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\SystemSettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SystemManage\TransferDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\TransferUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageAccountPowerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageModifyUserInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageResetPasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageUnitFunctionPowerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageUnitPowerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UnlockView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemManage\UserManageUserInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AbnormalCancelDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AbnormalCancelUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AbnormalEntrustDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AbnormalEntrustUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\AssetsDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\AssetsUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\CapitalDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\CapitalUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\DealDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\DealUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\EntrustDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AddBondTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\AddExceptionPoolInformationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\AddLimitRuleInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\AddTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\BanDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\BanUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\CopyTrategyUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\EntrustSummaryDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\EntrustSummaryUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Query\EntrustUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MsgBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\FreezingRatioTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\LiquidationDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\LiquidationUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\ModifyTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\PositionDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\PositionUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RiskControl\RiskStrategyDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RiskControl\RiskStrategyUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\ReduceBondTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\RuleDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\RuleUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\SystemDealDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\SystemDealOutDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\SystemDealOutUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\SystemDealUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\TipsTrategyUnitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\TurnIntoCapitalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\TurnOutCapitalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UnitManage\UnitTrategyDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\UnitTrategyUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\UserManageUnitPower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\VoidDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnitManage\VoidUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Common\Fonts\iconfont.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Common\Images\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Common\Images\buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Common\Images\sellOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\DLLL\microsoft.office.interop.excel.dll" />
+    <Content Include="Common\DLLL\Microsoft.Xaml.Behaviors.Design.dll" />
+    <Resource Include="Common\Images\LOGO.ico" />
+    <Resource Include="Common\Images\Login.png" />
+    <Resource Include="Common\Images\commission.png" />
+    <Resource Include="Common\Images\user.png" />
+    <Resource Include="Common\Images\unit.png" />
+    <Resource Include="Common\Images\sysOutDeal.png" />
+    <Resource Include="Common\Images\sysDeal.png" />
+    <Resource Include="Common\Images\strategy.png" />
+    <Resource Include="Common\Images\settingItem.png" />
+    <Resource Include="Common\Images\sell.png" />
+    <Resource Include="Common\Images\scrap.png" />
+    <Resource Include="Common\Images\risk.png" />
+    <Resource Include="Common\Images\query.png" />
+    <Resource Include="Common\Images\prohibitedStock.png" />
+    <Resource Include="Common\Images\positionPlan.png" />
+    <Resource Include="Common\Images\position.png" />
+    <Resource Include="Common\Images\openClose.png" />
+    <Resource Include="Common\Images\limit.png" />
+    <Resource Include="Common\Images\entrust.png" />
+    <Resource Include="Common\Images\deal.png" />
+    <Resource Include="Common\Images\capital.png" />
+    <Resource Include="Common\Images\cancel.png" />
+    <Resource Include="Common\Images\buyF1.png" />
+    <Resource Include="Common\Images\bonus.png" />
+    <Resource Include="Common\Images\automatic.png" />
+    <Resource Include="Common\Images\auto.png" />
+    <Resource Include="Common\Images\assets.png" />
+    <Resource Include="Common\Images\appoint.png" />
+    <Resource Include="Common\Images\accountPosition.png" />
+    <Resource Include="Common\Images\accountPool.png" />
+    <Resource Include="Common\Images\accountManage.png" />
+    <Resource Include="Common\Images\abnormalCancel.png" />
+    <Resource Include="Common\Images\abnormal.png" />
+    <Resource Include="Common\Images\close.png" />
+    <Resource Include="Common\Images\eixt.png" />
+    <Resource Include="Common\Images\msg.png" />
+    <Resource Include="Common\Images\sign.png" />
+    <Resource Include="Common\Images\setting.png" />
+    <Resource Include="Common\Images\refresh.png" />
+    <Resource Include="Common\Images\modify.png" />
+    <Resource Include="Common\Images\logOut.png" />
+    <Resource Include="Common\Images\lock.png" />
+    <Resource Include="Common\Images\account.png" />
+    <Resource Include="Common\Images\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xh.FastTrading.Model\Xh.FastTrading.Model.csproj">
+      <Project>{63df110a-1a6d-462c-9880-4afec1763ff0}</Project>
+      <Name>Xh.FastTrading.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\InterFace\RiskManage\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

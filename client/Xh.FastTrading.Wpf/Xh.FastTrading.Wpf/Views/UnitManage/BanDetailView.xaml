@@ -1,0 +1,175 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+             x:Class="Xh.FastTrading.Wpf.Views.UnitManage.BanDetailView"
+             mc:Ignorable="d" 
+             Style="{DynamicResource UserControl_Shadow}">
+    <UserControl.Resources>
+        <Style  x:Name="txtRemarks" TargetType="{x:Type TextBox}">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <!--//消除锯齿-->
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Height" Value="1000"/>
+            <Setter Property="Width" Value="1700"/>
+            <Setter Property="AcceptsReturn" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid x:Name="Grid">
+                            <Border x:Name="Border" SnapsToDevicePixels="True"
+                                CornerRadius="1"
+                                BorderBrush="LightGray" BorderThickness="2" Background="White" />
+                            <ScrollViewer x:Name="PART_ContentHost" BorderThickness="0" IsTabStop="False" Margin="2" VerticalAlignment="Top"  />
+                            <!--//"PART_ContentHost"专属名词，改动报错-->
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#EFC87D"/>
+                                <Setter TargetName="Border" Property="Opacity" Value="0.2"/>
+                            </Trigger>
+                            <!--//鼠标悬停-->
+
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#EFC87D"/>
+                                <Setter TargetName="Border" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                            <!--//焦点-->
+
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Grid" Property="Opacity" Value="0.2" />
+                            </Trigger>
+                            <!--//无效-->
+
+                            <Trigger Property="IsReadOnly" Value="True">
+                                <Setter TargetName="Grid" Property="IsEnabled" Value="False" />
+                                <Setter TargetName="Border" Property="Opacity" Value="0.2" />
+                                <Setter TargetName="PART_ContentHost" Property="Opacity" Value="0.5" />
+                            </Trigger>
+                            <!--//只读-->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        <Style x:Key="TabControlStyle1" TargetType="{x:Type TabControl}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Width" Value="2000"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Name="ColumnDefinition0"/>
+                                <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="HeaderPanelGrid" Grid.Column="0" Grid.Row="0" Panel.ZIndex="1">
+                                <mah:Underline x:Name="Underline" BorderBrush="{TemplateBinding mah:TabControlHelper.UnderlineBrush}" Background="Transparent" LineThickness="1" Placement="Bottom" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Visibility="Collapsed"/>
+                                <TabPanel x:Name="HeaderPanel" IsItemsHost="True" KeyboardNavigation.TabIndex="1"/>
+                            </Grid>
+                            <Border x:Name="ContentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                <ContentPresenter x:Name="PART_SelectedContentHost" ContentTemplate="{TemplateBinding SelectedContentTemplate}" Content="{TemplateBinding SelectedContent}" ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="mah:TabControlHelper.Underlined" Value="TabPanel">
+                                <Setter Property="Visibility" TargetName="Underline" Value="Visible"/>
+                            </Trigger>
+                            <!--<Trigger Property="TabStripPlacement" Value="Bottom">
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Row" TargetName="HeaderPanelGrid" Value="1"/>
+                                <Setter Property="Margin" TargetName="HeaderPanelGrid" Value="2,0,2,2"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="Auto"/>
+                                <Setter Property="Placement" TargetName="Underline" Value="Top"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Left">
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="*"/>
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="1"/>
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Column" TargetName="HeaderPanelGrid" Value="0"/>
+                                <Setter Property="Grid.Row" TargetName="HeaderPanelGrid" Value="0"/>
+                                <Setter Property="Margin" TargetName="HeaderPanelGrid" Value="2,2,0,2"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                                <Setter Property="Placement" TargetName="Underline" Value="Right"/>
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Right">
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="*"/>
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="2000"/>
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0"/>
+                                <Setter Property="Grid.Column" TargetName="HeaderPanelGrid" Value="1"/>
+                                <Setter Property="Grid.Row" TargetName="HeaderPanelGrid" Value="0"/>
+                                <Setter Property="Margin" TargetName="HeaderPanelGrid" Value="0,2,2,2"/>
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
+                                <Setter Property="Placement" TargetName="Underline" Value="Left"/>
+                            </Trigger>-->
+                            <Trigger Property="SelectedItem" Value="true">
+                                <Setter  Property="BorderBrush" Value="Red"/>
+                                <Setter  Property="BorderThickness" Value="0 1 0 0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="mah:HeaderedControlHelper.HeaderFontSize" Value="{DynamicResource MahApps.Font.Size.TabItem}"/>
+            <Setter Property="mah:TabControlHelper.UnderlineBrush" Value="Red"/>
+            <Setter Property="mah:TabControlHelper.UnderlineMouseOverBrush" Value="{DynamicResource MahApps.Brushes.Gray.MouseOver}"/>
+            <Setter Property="mah:TabControlHelper.UnderlineMouseOverSelectedBrush" Value="{DynamicResource MahApps.Brushes.Highlight}"/>
+            <Setter Property="mah:TabControlHelper.UnderlineSelectedBrush" Value="{DynamicResource MahApps.Brushes.Accent}"/>
+        </Style>
+
+
+
+    </UserControl.Resources>
+    <Grid x:Name="RootGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+        <TabControl HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="1080" MaxWidth="2000" >
+                <TabItem Header="股票池"  Background="#00BCD4" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <StackPanel HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Stretch" Orientation="Vertical" Margin="3 0" >
+                    <Button Content="保存" Style="{StaticResource BtnInfoStyle}" FontSize="12"  HorizontalAlignment="Left" Height="32" Width="85" Foreground="White" Background="#FF4081"/>
+                        <TextBox x:Name="txtPool"  MaxWidth="1660"  MinHeight="510" MaxHeight="780" MinWidth="1090" Background="White"  BorderThickness="1" Margin="0 7"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="全局禁买设置" Background="#00BCD4" Foreground="White" >
+                <StackPanel HorizontalAlignment="Left" Grid.Column="1"  VerticalAlignment="Stretch" Orientation="Vertical" Margin="3 0" >
+                        <Button Content="保存" 
+                                Style="{StaticResource BtnInfoStyle}" 
+                                FontSize="12"  Height="32" Width="85" HorizontalAlignment="Left" Foreground="White" Background="#FF4081"/>
+                        <TextBox Width="1090" Height="500" Background="White"   Margin="0 15"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="例外设置"  Background="#00BCD4" Foreground="White" >
+                <StackPanel HorizontalAlignment="Left" Grid.Column="1"  VerticalAlignment="Stretch" Orientation="Vertical" Margin="3 0" >
+                    <Button Content="保存" Style="{StaticResource BtnInfoStyle}" FontSize="12"  HorizontalAlignment="Left" Height="32" Width="85" Foreground="White" Background="#FF4081"/>
+                    <TextBox Width="1090" Height="500" Background="White"   Margin="0,15,0,0"/>
+                </StackPanel>
+
+            </TabItem>
+        </TabControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

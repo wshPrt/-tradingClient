@@ -1,0 +1,6 @@
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\bin\Debug\Uninstall.exe.config
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\bin\Debug\Uninstall.exe
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\bin\Debug\Uninstall.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\obj\Debug\Uninstall.csproj.CoreCompileInputs.cache
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\obj\Debug\Uninstall.exe
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Uninstall\obj\Debug\Uninstall.pdb

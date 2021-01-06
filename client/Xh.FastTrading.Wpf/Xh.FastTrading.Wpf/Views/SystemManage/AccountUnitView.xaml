@@ -1,0 +1,74 @@
+﻿<Metro:UserControl   x:Class="Xh.FastTrading.Wpf.Views.SystemManage.AccountUnitView"
+             xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+             DataContext="{Binding Source={StaticResource Locator},Path=AccountPool}"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" 
+             d:DesignWidth="1100"
+              Style="{DynamicResource UserControl_Shadow}">
+    
+    <UserControl.Resources>
+        <Style x:Key="BtnInfoStyle" TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#FFCCBC"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <TextBlock Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top"  >
+                <Label Content="主账户池"  HorizontalAlignment="Left" Foreground="#A1A28D" FontSize="23" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button HorizontalAlignment="Right" 
+                        Content="刷新" 
+                        Width="90" 
+                        Background="#FFCCBC" 
+                        Style="{StaticResource BtnInfoStyle}"
+                        VerticalAlignment="Stretch"
+                        FontSize="14"
+                        Margin="800,0,0,0"
+                        Command="{Binding RefreshCommand}"/>
+                <Button HorizontalAlignment="Right" 
+                        Content="导出" 
+                        Width="90" 
+                        Background="#FFCCBC"
+                        Style="{StaticResource BtnInfoStyle}"
+                        VerticalAlignment="Stretch" 
+                        FontSize="14"  
+                        Margin="8,0,0,0"
+                        Command="{Binding ExcelCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Metro:UserControl>

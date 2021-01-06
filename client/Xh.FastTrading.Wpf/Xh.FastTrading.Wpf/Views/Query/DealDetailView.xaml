@@ -1,0 +1,45 @@
+﻿<Metro:UserControl x:Class="Xh.FastTrading.Wpf.Views.DealDetailView"
+             xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views"
+             DataContext="{Binding Source={StaticResource Locator},Path=DealRecord}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="1200"
+             Style="{DynamicResource UserControl_Shadow}">
+    <Grid>
+        <ScrollViewer BorderBrush="Transparent"  BorderThickness="0" Style="{DynamicResource for_scrollviewer}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Width="2000" HorizontalAlignment="Left" >
+                <DataGrid x:Name="dataGridFert"
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="None"
+                          RowHeaderWidth="0" 
+                          IsReadOnly="True"
+                          CanUserDeleteRows="False" 
+                          CanUserAddRows="False"
+                          ItemsSource="{Binding List}" Height="900">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="成交日期" Width="auto" Binding="{Binding DealDateTime}"/>
+                        <DataGridTextColumn Header="成交日期" Width="auto" Binding="{Binding DealTime}"/>
+                        <DataGridTextColumn Header="证券代码" Width="auto" Binding="{Binding SecuritiesCode}"/>
+                        <DataGridTextColumn Header="证券名称" Width="auto" Binding="{Binding SecuritiesName}"/>
+                        <DataGridTextColumn Header="委托类型" Width="auto" Binding="{Binding EntrustStr}"/>
+                        <DataGridTextColumn Header="成交价" Width="auto" Binding="{Binding DealPrice}"/>
+                        <DataGridTextColumn Header="成交数量" Width="auto" Binding="{Binding DealAmount}"/>
+                        <DataGridTextColumn Header="成交金额" Width="auto" Binding="{Binding DealAmountMoney}"/>
+                        <DataGridTextColumn Header="佣金" Width="auto" Binding="{Binding Commission}"/>
+                        <DataGridTextColumn Header="管理费" Width="auto" Binding="{Binding TransferFee}"/>
+                        <!--<DataGridTextColumn Header="过户费" Width="auto" Binding="{Binding TransferFee}"/>-->
+                        <DataGridTextColumn Header="成交编号" Width="auto" Binding="{Binding DealNumber}"/>
+                        <DataGridTextColumn Header="委托编号" Width="auto" Binding="{Binding EntrustNumber}"/>
+                        <DataGridTextColumn Header="主账号" Width="auto" Binding="{Binding Account}"/>
+                        <DataGridTextColumn Header="是否转入" Width="auto" Binding="{Binding IsNoIntoStr}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Metro:UserControl>

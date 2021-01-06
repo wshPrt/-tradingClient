@@ -1,0 +1,84 @@
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll.config
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\CommonServiceLocator.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\System.Windows.Interactivity.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csprojAssemblyReference.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CoreCompileInputs.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CopyComplete
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf1218\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll.config
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\CommonServiceLocator.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\System.Windows.Interactivity.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.xml
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.xml
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CoreCompileInputs.cache
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CopyComplete
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll.config
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\CommonServiceLocator.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\System.Windows.Interactivity.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csprojAssemblyReference.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CoreCompileInputs.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CopyComplete
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf12232107\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll.config
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Sup-Trade.Model.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\CommonServiceLocator.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\System.Windows.Interactivity.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\bin\Debug\Newtonsoft.Json.xml
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csprojAssemblyReference.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CoreCompileInputs.cache
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csproj.CopyComplete
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.dll
+E:\Tencent Files\MobileFile\workSpace\Xh.FastTrading.Wpf20201224\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Sup-Trade.Model.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Model\obj\Debug\Xh.FastTrading.Model.csprojAssemblyReference.cache

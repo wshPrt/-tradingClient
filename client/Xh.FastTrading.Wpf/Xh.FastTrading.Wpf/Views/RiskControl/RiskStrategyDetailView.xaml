@@ -1,0 +1,78 @@
+﻿<Metro:UserControl  x:Class="Xh.FastTrading.Wpf.Views.RiskStrategyDetailView"
+             xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1100"
+                    Style="{DynamicResource UserControl_Shadow}">
+    <Metro:UserControl.Resources>
+        <!--Button 样式-->
+        <Style x:Key="BtnInfoStyle" TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="LightGray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#0097A7"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <TextBlock Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Metro:UserControl.Resources>
+
+    <Grid>
+        <StackPanel Orientation="Vertical"  Width="auto" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  VerticalAlignment="Bottom"  Margin="10,0,0,0" Height="51" Width="1060">
+                <TextBox Width="310" Tag="请输入搜索内容" Style="{StaticResource TextBoxStyle}" FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,15,0,0" Foreground="#A1A28D" Height="28" />
+                <Button Content="设置限买"  Style="{StaticResource BtnInfoStyle}"  Background="#F5F5F5" HorizontalAlignment="Right" Height="40" Width="110" VerticalAlignment="Stretch" Margin="350,6,5,5" />
+                <Button Content="取消先买"  Style="{StaticResource BtnInfoStyle}"  Background="#F5F5F5" HorizontalAlignment="Right" Height="40" Width="110" VerticalAlignment="Stretch" Margin="10,6,5,5" />
+                <Button Content="取消强平"  Style="{StaticResource BtnInfoStyle}"  Background="#F5F5F5" HorizontalAlignment="Right" Height="40" Width="110" VerticalAlignment="Stretch" Margin="40,6,5,5" />
+            </StackPanel>
+
+            <ScrollViewer Width="auto"
+                           BorderBrush="Transparent" 
+                                BorderThickness="0" 
+                                Style="{DynamicResource for_scrollviewer}"  
+                                VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="dataGridFert" 
+                                  GridLinesVisibility="None"
+                                  RowHeaderWidth="0" 
+                                  CanUserDeleteRows="False" 
+                                  CanUserAddRows="False" 
+                                  Margin="0 5">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="代码" Width="auto" />
+                        <DataGridTextColumn Header="名称" Width="auto" Binding="{Binding AMOUNT}"/>
+                        <DataGridTextColumn Header="地区" Width="auto" Binding="{Binding AREA}"/>
+                        <DataGridTextColumn Header="经纪人" Width="auto" Binding="{Binding ACTION_DATE}"/>
+                        <DataGridTextColumn Header="风控员" Width="auto"/>
+                        <DataGridTextColumn Header="限买" Width="auto"/>
+                        <DataGridTextColumn Header="强平" Width="auto"/>
+                        <DataGridTextColumn Header="资金规模" Width="auto"/>
+                        <DataGridTextColumn Header="赢亏" Width="auto"/>
+                        <DataGridTextColumn Header="盈亏比例" Width="auto"/>
+                        <DataGridTextColumn Header="总资产" Width="auto"/>
+                        <DataGridTextColumn Header="持仓市值" Width="auto"/>
+                        <DataGridTextColumn Header="可用资金" Width="auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Metro:UserControl>

@@ -1,0 +1,160 @@
+﻿<Window x:Class="Xh.FastTrading.Wpf.Views.UnitManage.AddTrategyUnitView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:event="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:behaviors="clr-namespace:Xh.FastTrading.Wpf.Common.Untils"
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage" 
+             DataContext="{Binding Source={StaticResource Locator},Path=UnitManage}"
+             WindowStyle="ThreeDBorderWindow"
+             ResizeMode ="CanMinimize"
+             WindowState="Normal"
+             Width="558"
+             Height="650">
+    <event:Interaction.Behaviors>
+        <behaviors:WindowCloseBehaviour Close="{Binding ToClose}"/>
+    </event:Interaction.Behaviors>
+
+    <Grid Width="558" FocusManager.FocusedElement="{Binding ElementName=txtCode}">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch"   Margin="10,-3,0,10" Width="538">
+            <TextBlock Text="新 增 中 期 策 略 单 元" FontSize="20" Foreground="Gray" Margin="10,0,0,0"/>
+            <Border BorderBrush="LightGray" BorderThickness="1" Margin="10,10,0,0"/>
+            <ScrollViewer  Height="500" BorderBrush="Gray"  BorderThickness="0" Margin="10,0" Style="{StaticResource for_scrollviewer}"  VerticalScrollBarVisibility="Auto" >
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch" Orientation="Vertical" Width="510" >
+                    <TextBox x:Name="txtCode" Tag="代码" Text="{Binding ValidateUI.UnitCode}" Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,10,0,0"/>
+                    <TextBox x:Name="txtName" Tag="名称" Text="{Binding ValidateUI.UnitName}" Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,20,0,0"/>
+                    <TextBox  x:Name="txtRegion" Tag="地区" Text="{Binding ValidateUI.UnitRegion}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtAgent" Tag="经纪人"  Text="{Binding ValidateUI.UnitAgent}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,30,0,0"/>
+
+                    <TextBox x:Name="txtRisk" Tag="风控员"  Text="{Binding ValidateUI.UnitRisk}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtAccount" Tag="实际账户" Text="{Binding ValidateUI.ActualAccount}" Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtPool" Tag="账户池"  Text="{Binding ValidateUI.AccountPool}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,30,0,0"/>
+                    <TextBlock Text="杠杆比例" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox  x:Name="txtleve" Text="{Binding ValidateUI.Unitleverage}" Style="{StaticResource TextBoxStyle}"   FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="管理费率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox x:Name="txtRatio" 
+                                 Text="{Binding ValidateUI.ManageRatio}" Style="{StaticResource TextBoxStyle}"  
+                                 FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="软件费率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox x:Name="txtSoftwareRate" 
+                                 Text="{Binding ValidateUI.UnitSoftwareRate}" Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="佣金率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox x:Name="txtCommissionRate"   
+                                 Text="{Binding ValidateUI.CommissionRate}" 
+                                 Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="股票个数限制" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox x:Name="txtRestrictionStock"  Text="{Binding ValidateUI.IndividualRestrictionStock}" Style="{StaticResource TextBoxStyle}" FontSize="17"  Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="主板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtProportionBoardStocks"   
+                                 Text="{Binding ValidateUI.ProportionBoardStocks}" 
+                                 Style="{StaticResource TextBoxStyle}"  
+                                 FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="创业板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtProportionGemStocks" 
+                             Text="{Binding ValidateUI.ProportionGemStocks}" 
+                             Style="{StaticResource TextBoxStyle}"  
+                             FontSize="17" 
+                             Foreground="LightGray"/>
+                    <TextBlock Text="创业板总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtTotalProportionGem"  Style="{StaticResource TextBoxStyle}" Text="{Binding ValidateUI.TotalProportionGem}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="中小板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtScienceInnovationBoardRatio" Text="{Binding ValidateUI.ScienceInnovationBoardRatio}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="中小板总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtTotalProportionSmallMediumBoards" Text="{Binding ValidateUI.TotalProportionSmallMediumBoards}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="中小创总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtMiddleSmallTotalProportion"  Text="{Binding ValidateUI.MiddleSmallTotalProportion}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="科创板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox  x:Name="txtScienceInnovationTotalRatio" Text="{Binding ValidateUI.ScienceInnovationTotalRatio}"  Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="警戒线比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtCordonRatio"  Text="{Binding ValidateUI.CordonRatio}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="平仓线比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox x:Name="txtLevelingLineRatio" Text="{Binding ValidateUI.LevelingLineRatio}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBox x:Name="txtIndividualRestrictionStock" Tag="禁买股票" Text="{Binding ValidateUI.NoBuyingShares}" FontSize="17" Foreground="Gray" BorderThickness="0"  Margin="0 30 0 0"/>
+                    <Border BorderBrush="LightGray"  BorderThickness="1"/>
+                    <TextBlock Text="委托价格范围限制" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <ComboBox x:Name="txtFreezingRatio" Text="{Binding ValidateUI.PriceLimit}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" >
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>0</ComboBoxItem>
+                    </ComboBox>
+
+                    <TextBox x:Name="txtuser" Tag="真实姓名" Style="{StaticResource TextBoxStyle}"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,40,0,0" />
+                    <TextBox x:Name="txtContractNumber" Tag="合约号" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" Margin="0,40,0,0" />
+
+
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel>
+            <StackPanel Margin="30 565" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button x:Name="btnCancel" Click="btnCancel_Click" Style="{StaticResource BtnInfoStyle}" Content="取 消" Foreground="White" HorizontalAlignment="Left"   Background="#00BCD4" Width="90" />
+                <Button  Content="确 定" Foreground="White" Command="{Binding AddCommand}" Style="{StaticResource BtnInfoStyle}" HorizontalAlignment="Right"  Background="#FF4081" Width="90" Margin="20,0,0,0" />
+            </StackPanel>
+
+        </StackPanel>
+       
+    </Grid>
+
+    <!--<StackPanel  Orientation="Vertical">
+                            <DockPanel x:Name="cmbUnitId">
+                                <StackPanel DockPanel.Dock="Left"  Height="50" Width="511" Margin="0 10 0 20">
+                                    <ComboBox SelectedIndex="0"  FontSize="17"  Margin="0,9" Text="{Binding ValidateUI.UnitId}"
+                                            ItemsSource="{Binding CmbList}"
+                                            SelectedItem="{Binding CmbItem}"
+                                            DisplayMemberPath="Name"
+                                            SelectedValuePath="Code"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal"  Width="150" Margin="0 -20 0 0">
+                                    <TextBlock Text="{Binding SecuritiesCode,StringFormat='\{0\}'}" Margin="10 0"></TextBlock>
+                                    <TextBlock Text="{Binding SecuritiesName,StringFormat='\{1\}'}" Margin="10 0"></TextBlock>
+                                </StackPanel>
+                            </DockPanel>
+                        </StackPanel>-->
+    <!--<StackPanel  Orientation="Vertical">
+                            <DockPanel x:Name="cmbUsePool">
+                                <StackPanel DockPanel.Dock="Left"  Height="50" Width="511" Margin="0 10 0 20">
+                                    <ComboBox x:Name="cmbUnit" SelectedIndex="0"  FontSize="17"   Margin="0,9" 
+                                            ItemsSource="{Binding CmbListPool}"
+                                            SelectedItem="{Binding CmbItemPool}"
+                                            DisplayMemberPath="Id"
+                                            SelectedValuePath="Code"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="0 -20 0 0"
+                                Width="150" 
+                                Orientation="Horizontal"
+                                DataContext="{Binding CmbItem}">
+                                    <TextBlock  Text="{Binding Id,StringFormat='\{0\}'}" Width="144" ></TextBlock>
+                                    <TextBlock Text="{Binding Code,StringFormat='\{1\}'}"></TextBlock>
+                                </StackPanel>
+                            </DockPanel>
+                        </StackPanel>-->
+
+    <!--<StackPanel  Orientation="Vertical" DataContext="{Binding Source={StaticResource Locator},Path=AccountPool}">
+                            <DockPanel x:Name="cmbUnitId">
+                                <StackPanel DockPanel.Dock="Left"   Height="50" Width="221" Margin="0 0 0 20" >
+                                    <ComboBox  Width="200" Margin="0 12 " 
+                              HorizontalAlignment="Left" 
+                              ItemsSource="{Binding CmbList}"
+                              SelectedItem="{Binding CmbItem}"
+                              DisplayMemberPath="Id"
+                              SelectedValuePath="Name"
+                              >
+                                    </ComboBox>
+                                </StackPanel>
+
+                                <StackPanel Margin="-200 -20 0 0" HorizontalAlignment="Left"
+                                Width="156" 
+                                Orientation="Horizontal"
+                                DataContext="{Binding CmbList}" Height="29">
+                                    <TextBlock  Text="{Binding Id,StringFormat='\{0\}'}" Width="144" HorizontalAlignment="Center" Height="33"  ></TextBlock>
+                                    <TextBlock Text="{Binding Name,StringFormat='\{1\}'}"></TextBlock>
+                                </StackPanel>
+                            </DockPanel>
+                        </StackPanel>-->
+</Window>

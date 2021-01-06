@@ -1,0 +1,93 @@
+﻿<Window  x:Class="Xh.FastTrading.Wpf.Views.UnitManage.CopyTrategyUnitView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage"
+             DataContext="{Binding Source={StaticResource Locator},Path=UnitManage}"
+             xmlns:event="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+             xmlns:behaviors="clr-namespace:Xh.FastTrading.Wpf.Common.Untils"
+             WindowStyle="ThreeDBorderWindow"
+             ResizeMode ="CanMinimize"
+             WindowState="Normal"
+             Height="650" Width="559">
+    <event:Interaction.Behaviors>
+        <behaviors:WindowCloseBehaviour Close="{Binding ToClose}"/>
+    </event:Interaction.Behaviors>
+    <Grid Width="558" >
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch"   Margin="10,-3,0,0.6" Width="538">
+            <TextBlock Text="复 制 中 期 策 略 单 元" FontSize="20" Foreground="Gray"/>
+            <Border BorderBrush="LightGray" BorderThickness="1" Margin="10,10,0,0"/>
+            <ScrollViewer Height="500" BorderBrush="Gray"  BorderThickness="0" Margin="10,0" Style="{StaticResource for_scrollviewer}"  VerticalScrollBarVisibility="Auto" >
+                <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Stretch"  Orientation="Vertical" Width="510" >
+                    <TextBlock Text="代码" FontSize="13" Foreground="Gray"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitCode}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="名称" FontSize="13" Foreground="Gray" Margin="0,10,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitName}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="地区" FontSize="13" Foreground="Gray" Margin="0,20,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitRegion}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0"  FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="经纪人" FontSize="13" Foreground="Gray" Margin="0,20,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitAgent}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="风控员" FontSize="13" Foreground="Gray" Margin="0,20,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitRisk}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBox Tag="实际账户" Text="{Binding SelecteRow.Account}" Style="{StaticResource TextBoxStyle}" BorderThickness="0" FontSize="17" Foreground="LightGray" Margin="0,20,0,0"/>
+                    <Border BorderBrush="LightGray" BorderThickness="1" Margin="0,5,0,0"/>
+                    <TextBlock  Text="账户池" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.AccountPool}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="杠杆比例" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.Unitleverage}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="管理费率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox Text="{Binding SelecteRow.ManageRatio}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0"  FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="软件费率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.UnitSoftwareRate}"  Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="佣金率" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.CommissionRate}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0"  FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="股票个数限制" FontSize="13" Foreground="Gray" Margin="0,15,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.IndividualRestrictionStock}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="主板个股比例"  FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.ProportionBoardStocks}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="创业板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox  Text="{Binding SelecteRow.ProportionGemStocks}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0"  FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="创业板总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.TotalProportionGem,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="中小板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.ProportionSmallMediumBoardStocks}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="中小板总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.TotalProportionSmallMediumBoards}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="中小创总比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.MiddleSmallTotalProportion,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="科创板个股比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox  Text="{Binding SelecteRow.ScienceInnovationBoardRatio,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="警戒线比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox  Text="{Binding SelecteRow.CordonRatio,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+                    <TextBlock Text="平仓线比例" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <TextBox   Text="{Binding SelecteRow.LevelingLineRatio,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource TextBoxStyle}" Margin="0 8 0 0" FontSize="13" Foreground="LightGray" VerticalContentAlignment="Top" />
+
+                    <TextBox Tag="禁买股票" Text="{Binding SelecteRow.NoBuyingShares,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" BorderThickness="0" FontSize="17" Foreground="Gray" Margin="0,40,0,0"/>
+                    <Border BorderBrush="LightGray" BorderThickness="1" />
+
+                    <TextBlock Text="委托价格范围限制" FontSize="13" Foreground="Gray" Margin="0,30,0,0"/>
+                    <ComboBox  Text="{Binding SelecteRow.PriceLimit,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" SelectedIndex="0"  Margin="0 8 0 0"  FontSize="17" Foreground="LightGray" VerticalContentAlignment="Top" >
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>0</ComboBoxItem>
+                    </ComboBox>
+
+                    <TextBox  Tag="真实姓名" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray"  Margin="0,40,0,0" />
+                    <TextBox  Tag="合约号" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray"  Margin="0,10,0,0" />
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <DockPanel Margin="50 500 0 0"  HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Right" Margin="30" Orientation="Horizontal" >
+                <Button  Content="取 消" Click="Button_Click" Style="{StaticResource BtnInfoStyle}" Foreground="White" HorizontalAlignment="Left"  Background="#00BCD4" Width="90" />
+                <Button  Content="确 定" Command="{Binding CopyCommand}" Style="{StaticResource BtnInfoStyle}" Foreground="White" HorizontalAlignment="Right"  Background="#FF4081" Width="90" Margin="20,0,0,0"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

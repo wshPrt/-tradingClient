@@ -1,0 +1,29 @@
+﻿<Window x:Class="Xh.FastTrading.Wpf.Views.UnitManage.TurnOutCapitalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage"
+             DataContext="{Binding Source={StaticResource Locator},Path=UnitManage}"
+             mc:Ignorable="d" 
+             WindowStyle="None"
+             WindowState="Normal"
+              Height="318" Width="454">
+    <DockPanel>
+        <Grid  Background="White">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch"  Orientation="Vertical" Margin="10" Width="454">
+                <TextBlock Text="转 入 资 金 " FontSize="20" Foreground="Gray" />
+                <Border BorderBrush="LightGray" BorderThickness="1" Margin="0,10,0,0"/>
+
+                <TextBlock Text="金额" FontSize="13" Foreground="#00BCD4" Margin="10,30,0,0"/>
+                <TextBox   FontSize="17" Text="{Binding ValidateUI.UnitMargin}" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Visible"  Margin="10,0,18,0" Height="32" />     
+                <Border BorderBrush="#00BCD4" BorderThickness="1" Margin="10,-1,0,0"/>
+
+                <TextBox  Tag="备注" Text="{Binding ValidateUI.Remarks}" Style="{StaticResource TextBoxStyle}" FontSize="17" Foreground="LightGray" Margin="10,40,0,0" />
+
+                <Button x:Name="btnCancel" Click="btnCancel_Click" Content="取 消" Foreground="White" HorizontalAlignment="Left" Style="{StaticResource BtnInfoStyle}" VerticalAlignment="Top"  Background="#00BCD4" Width="90" Margin="225,60,0,0"/>
+                <Button  Content="确 定" Command="{Binding TurnOutCommand}" Foreground="White" HorizontalAlignment="Right" Style="{StaticResource BtnInfoStyle}"   Background="#FF4081" Width="90" Margin="0,-40,40,15"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

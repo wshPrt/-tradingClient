@@ -1,0 +1,140 @@
+﻿<Window x:Class="Xh.FastTrading.Wpf.Views.SystemManage.UserManageUnitPowerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+             WindowStyle="None"
+             xmlns:event="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:behaviors="clr-namespace:Xh.FastTrading.Wpf.Common.Untils"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             WindowState="Normal" 
+            Height="479" 
+            Width="660">
+    <!--DataContext="{Binding Source={StaticResource Locator},Path=UnitManage}"-->
+    <event:Interaction.Behaviors>
+        <behaviors:WindowCloseBehaviour Close="{Binding ToClose}"/>
+    </event:Interaction.Behaviors>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left"
+                    VerticalAlignment="Stretch"
+                    Orientation="Horizontal"
+                    Width="640"
+                    Margin="10,10,0,-10" >
+            <TextBlock Text="单 元 权 限"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Foreground="Gray"
+                       Margin="0,0,0,448" />
+            <Border BorderBrush="LightGray"
+                    HorizontalAlignment="Left"
+                    BorderThickness="0,0,0,1"
+                    VerticalAlignment="Stretch"
+                    Margin="-101,31,5,439"
+                    Width="640" />
+            <TextBox Tag="请输入搜索内容"
+                     Style="{StaticResource TextBoxStyle}"
+                     Foreground="LightGray"
+                     FontSize="16"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="-640 60"
+                     Width="253"  />
+            <TextBox Tag="请输入搜索内容"
+                     Style="{StaticResource TextBoxStyle}"
+                     Foreground="LightGray"
+                     FontSize="16"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Margin="-275 60"
+                     Width="257" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left"
+                    Orientation="Horizontal"
+                    Margin="10 -450 0 0"
+                    Height="305"
+                    Width="626"
+                    >
+            <ListBox   x:Name="lstPower"
+                       FontSize="20"
+                       ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                       HorizontalAlignment="Left"
+                       Width="260"
+                       BorderBrush="Gray"
+                       BorderThickness="1"
+                      
+                       DisplayMemberPath="Code"
+                       MouseDoubleClick="lstPower_MouseDoubleClick">
+                
+       
+                <!--ItemsSource="{Binding List,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                       SelectedItem="{Binding SelectedItem}"-->
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <mvvm:EventToCommand Command="{Binding SelectCommand}" CommandParameter="{Binding ElementName=txtBUY}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+            </ListBox>
+            <Button  x:Name="btnSelectAll"
+                     Content="全选"
+                     Style="{StaticResource BtnInfoStyle}"
+                     Margin="10,120,0,132"
+                     Width="86"
+                     Foreground="Black"
+                     Background="LightGray"
+                     Click="btnSelectAll_Click"/>
+            <Button  x:Name="btnClean"
+                     Content="全清"
+                     Style="{StaticResource BtnInfoStyle}"
+                     Margin="-88 180 0 88"
+                     Width="86"
+                     Foreground="Black"
+                     Background="LightGray" 
+                     Height="Auto"
+                     Click="btnClean_Click"/>
+            <ListBox  x:Name="lstUnitPower" HorizontalAlignment="Left"
+                      FontSize="20"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      Width="260"
+                       BorderBrush="Gray"
+                      BorderThickness="1"
+                      Margin="10,0,0,0"
+                      DisplayMemberPath="Code"
+                      MouseDoubleClick="lstUnitPower_MouseDoubleClick"
+                      />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Button x:Name="btnCancel" Click="btnCancel_Click" Content="取 消"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Height="40"
+                Width="100"
+                Foreground="White"
+                Background="#00BCD4"
+                Style="{StaticResource BtnInfoStyle}"
+                Margin="429,-60,121,14" />
+            <Button x:Name="btnConfirm" Content="确 定"
+                HorizontalAlignment="Right"
+                FontSize="15"
+                Height="40"
+                Width="100"
+                Foreground="White"
+                Background="#FF4081"
+                Style="{StaticResource BtnInfoStyle}"
+                Margin="0,-60,12,14" 
+                    Click="btnConfirm_Click"/>
+                <!--Command="{Binding UnitPowerCommand}"-->
+                    
+        </StackPanel>
+
+    </Grid>
+</Window>

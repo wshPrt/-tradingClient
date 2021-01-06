@@ -1,0 +1,280 @@
+﻿<Window
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:event="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:behaviors="clr-namespace:Xh.FastTrading.Wpf.Common.Untils"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             x:Class="Xh.FastTrading.Wpf.Views.SystemManage.AccountLimitSettingView"
+             DataContext="{Binding Source={StaticResource Locator},Path=Account}"
+             mc:Ignorable="d" 
+             WindowStyle="None"
+            Height="610" Width="903">
+    <!--<event:Interaction.Behaviors>
+        <behaviors:WindowCloseBehaviour Close="{Binding ToClose}"/>
+    </event:Interaction.Behaviors>-->
+    <Window.Resources>
+        <Style TargetType="{x:Type ContextMenu}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContextMenu}">
+                        <Border x:Name="Border" CornerRadius="4" Background="#A5181818"  BorderThickness="2">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="#BABABA" />
+                            </Border.BorderBrush>
+                            <ItemsPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <MultiTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"  Storyboard.TargetProperty="(FrameworkElement.Width)">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.0020000" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.3450000" Value="95"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"  Storyboard.TargetProperty="(FrameworkElement.Height)">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.0020000" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.3450000" Value="54"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiTrigger.EnterActions>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="{x:Type MenuItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <Border Margin="1" MinWidth="80" CornerRadius="5">
+                            <Border.Background>
+                                <SolidColorBrush x:Name="MyAnimatedBrushBackground" Color="Transparent" />
+                            </Border.Background>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" "/>
+                                <ContentPresenter ContentSource="Icon" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock Text="   "/>
+                                <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <MultiTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MyAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                                <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0020000" />
+                                                <LinearColorKeyFrame Value="#7E9C9C9C" KeyTime="00:00:00.0320000" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiTrigger.EnterActions>
+                                <MultiTrigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MyAnimatedBrushBackground" Storyboard.TargetProperty="Color">
+                                                <LinearColorKeyFrame Value="#7E9C9C9C" KeyTime="00:00:00.0020000" />
+                                                <LinearColorKeyFrame Value="Transparent" KeyTime="00:00:00.0320000" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </MultiTrigger.ExitActions>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+
+    <DockPanel>
+        <Grid  Background="White">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch"  Orientation="Vertical"  Width="903" Margin="0,0,0,210.2">
+                <TextBlock Text="账 号 和 限 额 设 置" FontSize="20" HorizontalAlignment="Left" Foreground="Gray" Margin="15,15,0,593.2" />
+                <Border BorderBrush="LightGray" HorizontalAlignment="Left" BorderThickness="0,0,0,1" Margin="0,-1180,-19,0" Width="910" Height="12" />
+                <TextBox Tag ="请输入搜索内容"
+                     Foreground="LightGray"
+                     FontSize="16"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     Margin="10,-1100,0,0"
+                     Width="253" 
+                     Style="{StaticResource TextBoxStyle}"/>
+
+                <TextBox Tag="请输入搜索内容"
+                     Foreground="LightGray"
+                     FontSize="16"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     Margin="444,-1100,0,0"
+                     Width="257" 
+                     Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    Margin="10,120,-0.2,0"
+                    Height="390"
+                    Width="903"
+                    >
+                <ListBox x:Name="EsCanSelectList" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                       HorizontalAlignment="Left"
+                        BorderBrush="Gray"
+                        Width="328"
+                        BorderThickness="1" 
+                       
+                         DisplayMemberPath="Name"
+                        MouseDoubleClick="EsCanSelectList_MouseDoubleClick"
+                        >
+                    <!--MouseDoubleClick="EsCanSelectList_MouseDoubleClick"
+                    ItemsSource="{Binding List,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                        SelectedItem="{Binding SelectedItem}"-->
+                    <!--<ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Name}" Width="200" HorizontalAlignment="Center">
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <mvvm:EventToCommand Command="{Binding SelectCommand}" CommandParameter="{Binding ElementName=txtBUY}"/>
+                            <mvvm:EventToCommand Command="{Binding SelectCommand}" CommandParameter="{Binding ElementName=txtSell}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                </ListBox>
+                <Button  Content="全选"
+                       FontFamily="/Sup-Trade;component/Common/Fonts/#iconfont"
+                     Margin="10,120,0,132"
+                     Width="86"
+                         Background="LightGray"
+                     Foreground="Black"
+                     Style="{StaticResource BtnInfoStyle}" Click="btnSelectAll_Click">
+
+                </Button>
+                <Button  Content="全清"
+                     Margin="-88,180,0,85"
+                     Width="86"
+                     Foreground="Black"
+                     Background="LightGray"
+                     Style="{StaticResource BtnInfoStyle}" Click="btnClean_Click"/>
+
+                <ListBox  x:Name="txtBUY" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          FontSize="20" 
+                          BorderBrush="Gray"
+                          Width="200" 
+                          BorderThickness="1" 
+                          Margin="10 0" 
+                          DisplayMemberPath="Name"
+                          MouseDoubleClick="txtBUY_MouseDoubleClick"
+                          >
+                    <!--ItemsSource="{Binding ValidateUI.Info}"-->
+
+                    <ListBox.ContextMenu>
+                        <ContextMenu Style="{x:Null}" Width="120" FontSize="16">
+                            <ContextMenu.Resources>
+                                <Style TargetType="MenuItem">
+                                    <Setter Property="Height" Value="23" />
+                                    <Setter Property="Background" Value="#FFFFFF"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="BorderBrush" Value="#FFFFFF"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#E6E6E6" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ContextMenu.Resources>
+                            <MenuItem Header="上移" Click="menUp_Click"></MenuItem>
+                            <MenuItem Header="下移" x:Name="menList" Click="menDown_CLick"></MenuItem>
+                            <MenuItem Header="限额" Click="Quota_Click"></MenuItem>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                    <!--<ListBoxItem>
+                        <TextBlock x:Name="txtCash" Text="限额"/>
+                    </ListBoxItem>-->
+                </ListBox>
+                <ListBox  x:Name="txtSell" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                         
+                          FontSize="20"
+                         BorderBrush="Gray"
+                          Width="200" 
+                          BorderThickness="1"
+                          Margin="10 0" 
+                          DisplayMemberPath="Name"
+                          MouseDoubleClick="txtSell_MouseDoubleClick"
+                         >
+                    <!--ItemsSource="{Binding ValidateUI.Info}"-->
+                    <!--<ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"  IsItemsHost="True"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>-->
+                    <ListBox.ContextMenu>
+                        <ContextMenu Style="{x:Null}" Width="120" FontSize="16">
+                            <ContextMenu.Resources>
+                                <Style TargetType="MenuItem">
+                                    <Setter Property="Height" Value="23" />
+                                    <Setter Property="Background" Value="#FFFFFF"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="BorderBrush" Value="#FFFFFF"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#E6E6E6" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ContextMenu.Resources>
+                            <MenuItem Header="上移" Click="SellUp_Click"></MenuItem>
+                            <MenuItem Header="下移" Click="SellDown_Click"></MenuItem>
+                            <MenuItem Header="限额" Click="Quota_Click"></MenuItem>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                </ListBox>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" Orientation="Horizontal" Margin="672,530,33,28">
+                <Button Content="取 消"
+                        x:Name="btnCancel"
+                        Click="btnCancel_Click"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Height="37"
+                Width="90"
+                Foreground="White"
+                Background="#00BCD4"
+                Style="{StaticResource BtnInfoStyle}"
+                 />
+                <Button Content="确 定"
+                HorizontalAlignment="Right"
+                FontSize="15"
+                Height="37"
+                Width="90"
+                Foreground="White"
+                Background="#FF4081"
+                Margin="10,0,0,0"
+                Click="AccountLimitSetting_Click"
+                Style="{StaticResource BtnInfoStyle}"
+                 />
+                <!--DataContext="{Binding Source={StaticResource Locator},Path=AccountPool}"
+                Command="{Binding AccountLimitSettingCommand}"-->
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Metro:Window  xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+                    x:Class="Xh.FastTrading.Wpf.Views.SystemManage.UnlockView"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+                    mc:Ignorable="d"
+                    WindowStyle="ToolWindow"
+                    Height="205"
+                    Width="308">
+    <DockPanel>
+        <Grid  Background="White" >
+            <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Orientation="Vertical"
+                    Margin="15,40,0,0">
+                <TextBlock  Text="请输入密码解锁"
+                        FontSize="18"
+                        Margin="0,-60,0,0"
+                        HorizontalAlignment="Center"
+                        Foreground="Black" />
+                <TextBlock Text="密码"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Foreground="#00BCD4" />
+                <TextBox  BorderThickness="0"
+                      BorderBrush="{x:Null}" />
+                <Border BorderBrush="LightBlue"
+                    BorderThickness="1"
+                    Margin="0,0,10,0" />
+                <Button  Content="解      锁"
+                     Background="#F5F5F5"
+                         Foreground="LightGray"
+                         FontSize="18"
+                         Style="{StaticResource BtnInfoStyle}"
+                     Margin="0 10 0 0"
+                     Width="260" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Metro:Window>

@@ -1,0 +1,683 @@
+﻿<metro:MetroWindow x:Class="Xh.FastTrading.Wpf.Views.MainWindow"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:views="clr-namespace:Xh.FastTrading.Wpf.Views"
+                   xmlns:views1="clr-namespace:Xh.FastTrading.Wpf.Views.UnitManage"
+                   xmlns:views11="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+                   xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+                   xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
+                   xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Converters"
+                   mc:Ignorable="d"
+                   Height="768"
+                   Width="1366"
+                   MinWidth="1366"
+                   MinHeight="768"
+                   Title="UTOP投资理财系统3.0 ( 易 富 版 )"
+                   WindowStartupLocation="CenterScreen"
+                   Background="White"
+                   Icon="/Sup-Trade;component/Common/Images/LOGO.ico"
+                   ShowIconOnTitleBar="True"
+                   ShowTitleBar="True"
+                   BorderThickness="0"
+                   GlowBrush="Black"
+                   ResizeMode="CanResizeWithGrip"
+                   WindowTransitionsEnabled="False">
+
+    <Window.Resources>
+        <!-- 买入 -->
+        <DataTemplate DataType="{x:Type views:BuyModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <views:BuyUnitView Width="250"
+                                       Margin="10,0,0,0" />
+                    <views:BuyPurchaseView Width="350"
+                                           Margin="-10,0,0,0" />
+                    <views:BuyDealView Width="350" />
+                </StackPanel>
+                <views:BuyDetailedView Grid.Row="1"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Stretch"
+                                       Margin="5,0,0,0" />
+            </Grid>
+        </DataTemplate>
+        <!-- 卖出 -->
+        <DataTemplate DataType="{x:Type views:SellModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <views:SellUint Width="250"
+                                    Margin="10,0,0,0" />
+                    <views:SellPurchaseView Width="350"
+                                            Margin="-10,0,0,0" />
+                    <views:SellDealView Width="350"
+                                        Margin="-10,0,0,0" />
+                </StackPanel>
+     
+                <views:SellDetailedView  Grid.Row="1"
+                                         HorizontalAlignment="Left"
+                                         Height="auto"
+                                         Width="auto"
+                                         VerticalAlignment="Stretch"
+                                         Margin="5,0,0,0" />
+            </Grid>
+        </DataTemplate>
+        <!-- 回购 -->
+        <DataTemplate DataType="{x:Type views:BackModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:BackUnitView />
+                <views:BackDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 自动交易 -->
+        <DataTemplate DataType="{x:Type views:AutoMaticModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:AutoMaticUnitView />
+                <views:AutoMaticDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 指定交易 -->
+        <DataTemplate DataType="{x:Type views:SpecifyModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions >
+                <views:SpecifyUnitView />
+                <views:SpecifyDetailedView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 撤单(F3) -->
+        <DataTemplate DataType="{x:Type views:CancelModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:CancelUnitView />
+                <views:CancelDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+
+        <!-- 中期策略 -->
+        <DataTemplate DataType="{x:Type views:RiskStrategyModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:RiskStrategyUnitView />
+                <views:RiskStrategyDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+
+        <!-- 资产(F4) -->
+        <DataTemplate DataType="{x:Type views:AssetsModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:AssetsUnitView />
+                <views:AssetsDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 委托记录 -->
+        <DataTemplate DataType="{x:Type views:EntrustModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:EntrustUnitView />
+                <views:EntrustDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 成交记录 -->
+        <DataTemplate DataType="{x:Type views:DealModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:DealUnitView />
+                <views:DealDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 资金流水 -->
+        <DataTemplate DataType="{x:Type views:CapitalModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:CapitalUnitView />
+                <views:CapitalDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+
+        <!-- 中期策略 -->
+        <DataTemplate DataType="{x:Type views:UnitTrategyModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:UnitTrategyUnitView />
+                <views:UnitTrategyDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 交易限制规则 -->
+        <DataTemplate DataType="{x:Type views:RuleModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:RuleUnitView />
+                <views:RuleDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 持仓汇总 -->
+        <DataTemplate DataType="{x:Type views:PositionModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:PositionUnitView />
+                <views:PositionDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 委托汇总 -->
+        <DataTemplate DataType="{x:Type views:EntrustSummaryModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:EntrustSummaryUnitView />
+                <views:EntrustSummaryDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 异常委托 -->
+        <DataTemplate DataType="{x:Type views:AbnormalEntrustModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:AbnormalEntrustUnitView />
+                <views:AbnormalEntrustDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 异常撤单 -->
+        <DataTemplate DataType="{x:Type views:AbnormalCancelModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views:AbnormalCancelUnitView />
+                <views:AbnormalCancelDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 废单汇总 -->
+        <DataTemplate DataType="{x:Type views:VoidModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views1:VoidUnitView />
+                <views1:VoidDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 系统内成交汇总 -->
+        <DataTemplate DataType="{x:Type views:SystemDealModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views1:SystemDealUnitView />
+                <views1:SystemDealDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 系统外成交汇总 -->
+        <DataTemplate DataType="{x:Type views:SystemDealOutModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views1:SystemDealOutUnitView />
+                <views1:SystemDealOutDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 禁买股票和例外设置 -->
+        <DataTemplate DataType="{x:Type views:BanModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views1:BanUnitView />
+                <views1:BanDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 自动平仓设置 -->
+        <DataTemplate DataType="{x:Type views:LiquidationModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views1:LiquidationUnitView />
+                <views1:LiquidationDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+
+        <!-- 用户管理 -->
+        <DataTemplate DataType="{x:Type views:UserManagemodel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:UserManageUnitView />
+                <views11:UserManageDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 开盘收盘 -->
+        <DataTemplate DataType="{x:Type views:OpenCloseModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:OpenCloseUnitView />
+                <views11:OpenCloseDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 分红送股 -->
+        <DataTemplate DataType="{x:Type views:DividendsModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:DividendsUnitView />
+                <views11:DividendsDetailView  Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 持仓划转 -->
+        <DataTemplate DataType="{x:Type views:TransferModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:TransferUnitView />
+                <views11:TransferDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 主账户池 -->
+        <DataTemplate DataType="{x:Type views:AccountModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:AccountUnitView Width="Auto"/>
+                <views11:AccountDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+        <!-- 主账号管理 -->
+        <DataTemplate DataType="{x:Type views:AccountManageModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:AccountManageUnitView />
+                <views11:AccountManageDetailView Grid.Row="1" />
+
+            </Grid>
+        </DataTemplate>
+        <!-- 主账号持仓 -->
+        <DataTemplate DataType="{x:Type views:AccountPositionModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <views11:AccountPositionUnitView/>
+                <views11:AccountPositionDetailView Grid.Row="1" />
+            </Grid>
+        </DataTemplate>
+
+    </Window.Resources>
+    <!--<Window.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}"></Binding>
+    </Window.DataContext>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#0097a7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="lblItem"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Block.TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontSize="26"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Text="UTOP投资理财系统3.0 ( 易 富 版 ) " 
+                           />
+
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                    <pu:DropDown HorizontalAlignment="Left"
+                             VerticalAlignment="Stretch"
+                             Margin="10,0,18,0">
+                        <Grid Width="75">
+
+                            <Label HorizontalAlignment="Left"
+                               VerticalAlignment="Stretch"
+                               Margin="-8 5"
+                               Width="23">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/Sup-Trade;component/Common/Images/sign.png"
+                                            Stretch="None" />
+                                </Label.Background>
+                            </Label>
+                            <TextBlock Text="{Binding UserName}"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Foreground="White"
+                                   Margin="17 0"
+                                   DataContext="{Binding Source={StaticResource Locator},Path=Login}" >
+                            </TextBlock>
+                            <ComboBox HorizontalAlignment="Right"
+                                  VerticalAlignment="Stretch"
+                                  Background="#0097a7"
+                                  ItemsSource="{Binding SortedItems}" 
+                                  StaysOpenOnEdit="True" 
+                                  BorderBrush="White" 
+                                  BorderThickness="0"
+                                  >
+                            </ComboBox>
+                        </Grid>
+                        <pu:DropDown.Child>
+                            <Grid Height="336"
+                              Width="199">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="55" />
+                                    <RowDefinition  Height="55" />
+                                    <RowDefinition Height="55" />
+                                    <RowDefinition Height="55" />
+                                    <RowDefinition Height="55" />
+                                    <RowDefinition Height="55" />
+                                </Grid.RowDefinitions>
+                                <Grid Margin="15,0">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="../Common/Images/lock.png"
+                                                    Stretch="Uniform" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock 
+                                           x:Name="txtLock"
+                                           Margin="0,0,0,0"
+                                           Text="           锁定"
+                                           Foreground="Black"
+                                           FontSize="15"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" MouseDown="txtLock_MouseDown"  >
+                                    </TextBlock>
+                                    <Border VerticalAlignment="Bottom"
+                                        BorderBrush="#EEEEEE"
+                                        BorderThickness="0,0,0,1" />
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+
+                                <Grid Grid.Row="1"
+                                  Margin="15,0">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="../Common/Images/refresh.png"
+                                                    Stretch="Uniform" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                                           pu:CheckBoxHelper.CheckedBackground="#74C178"
+                                           pu:CheckBoxHelper.CornerRadius="2"
+                                           pu:CheckBoxHelper.BoxHeight="25"
+                                           pu:CheckBoxHelper.BoxWidth="35"
+                                           Foreground="Black"
+                                           VerticalAlignment="Center"
+                                           FontFamily="/Panuon.UI.Silver;component/Resources/#fontawesome"
+                                           HorizontalAlignment="Center"
+                                           Text="            刷新" />
+                                    <Border VerticalAlignment="Bottom"
+                                        BorderBrush="#EEEEEE"
+                                        BorderThickness="0,0,0,1" />
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+
+                                <Grid Grid.Row="2" 
+                                  Margin="15,0">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush Stretch="Uniform"
+                                                    ImageSource="../Common/Images/modify.png" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                                           pu:CheckBoxHelper.CheckedBackground="#74C178"
+                                           pu:CheckBoxHelper.CornerRadius="2"
+                                           pu:CheckBoxHelper.BoxHeight="25"
+                                           pu:CheckBoxHelper.BoxWidth="35"
+                                           Foreground="Black"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontFamily="/Panuon.UI.Silver;component/Resources/#fontawesome"
+                                           Text="                    修改密码" MouseDown="TextBlock_MouseDown" 
+                                             
+                                           />
+                                    <Border VerticalAlignment="Bottom"
+                                        BorderBrush="#EEEEEE"
+                                        BorderThickness="0,0,0,1" />
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+
+                                <Grid Grid.Row="3"
+                                  Margin="15,0">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush Stretch="Uniform"
+                                                    ImageSource="../Common/Images/setting.png" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                                           pu:CheckBoxHelper.CheckedBackground="#74C178"
+                                           pu:CheckBoxHelper.CornerRadius="2"
+                                           pu:CheckBoxHelper.BoxHeight="25"
+                                           pu:CheckBoxHelper.BoxWidth="35"
+                                           Foreground="Black"
+                                           FontFamily="/Panuon.UI.Silver;component/Resources/#fontawesome"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Text="             设置"
+                                           x:Name="txtSetting" MouseDown="txtSetting_MouseDown"
+                                           />
+                                    <Border VerticalAlignment="Bottom"
+                                        BorderBrush="#EEEEEE"
+                                        BorderThickness="0,0,0,1" />
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+
+                                <Border Grid.Row="4"
+                                    VerticalAlignment="Bottom"
+                                    BorderBrush="#EEEEEE"
+                                    BorderThickness="0,0,0,1" />
+                                <Grid Grid.Row="4"
+                                  Margin="15,0">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush Stretch="Uniform"
+                                                    ImageSource="../Common/Images/logOut.png" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock x:Name="txtLogOff"
+                                           pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                                           pu:CheckBoxHelper.CheckedBackground="#74C178"
+                                           pu:CheckBoxHelper.CornerRadius="2"
+                                           pu:CheckBoxHelper.BoxHeight="25"
+                                           pu:CheckBoxHelper.BoxWidth="35"
+                                           Foreground="Black"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontFamily="/Panuon.UI.Silver;component/Resources/#fontawesome"
+                                           Text="               注销" MouseDown="txtLogOff_MouseDown"
+                                           />
+                                    <Border VerticalAlignment="Bottom"
+                                        BorderBrush="#EEEEEE"
+                                        BorderThickness="0,0,0,1" />
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+                                <Border Grid.Row="5"
+                                    VerticalAlignment="Bottom"
+                                    BorderBrush="#EEEEEE"
+                                    BorderThickness="0,0,0,1" />
+                                <Grid Grid.Row="5">
+                                    <TextBlock VerticalAlignment="Center"
+                                           Margin="-100,0,0,0">
+                                        <TextBlock.Background>
+                                            <ImageBrush Stretch="Uniform"
+                                                    ImageSource="../Common/Images/eixt.png" />
+                                        </TextBlock.Background>
+                                    </TextBlock>
+                                    <TextBlock pu:ButtonHelper.ButtonStyle="Link"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontFamily="/Panuon.UI.Silver;component/Resources/#fontawesome"
+                                        Text="           退出"
+                                        x:Name="btnExit"
+                                        Margin="10,0,0,0" MouseDown="btnExit_MouseDown">
+                                    </TextBlock>
+                                    <i:Interaction.Behaviors>
+                                        <local:EffectBehavior/>
+                                    </i:Interaction.Behaviors>
+                                </Grid>
+                            </Grid>
+
+                        </pu:DropDown.Child>
+
+                    </pu:DropDown>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"
+                                  MinWidth="200"
+                                  MaxWidth="300" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TreeView Style="{StaticResource TreeView}"
+                      ItemsSource="{Binding MainMenu}"
+                      PreviewMouseUp="TreeView_PreviewMouseUp">
+                <TreeView.ItemContainerStyle >
+                    <Style BasedOn="{StaticResource TreeViewItem}" TargetType="TreeViewItem" >
+                        <Style.Triggers >
+                            <DataTrigger Binding="{Binding IsVisible}" Value="False">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                            <StackPanel DataContext="{Binding}" Orientation="Horizontal">
+                                <Image Width="23" Height="23" Source="{Binding Icon}" Margin="5 0"></Image>
+                                <Label Content="{Binding Header}" VerticalContentAlignment="Center" Margin="10 0"/>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+                <GridSplitter Grid.Column="1"
+                          Grid.RowSpan="2"
+                          Margin="2,0"
+                          Width="6"
+                          Style="{StaticResource GridSplitter}"
+                          ResizeDirection="Columns"
+                          HorizontalAlignment="Center" />
+                <ContentPresenter Grid.Column="2"
+                              Content="{Binding Model}" />
+            </Grid>
+
+        <Border Grid.Row="2"
+                     Background="#0097a7">
+            <TextBlock x:Name="lblEndPage"
+                       HorizontalAlignment="Center"
+                       Block.TextAlignment="Center"
+                       FontSize="14"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       Width="1920"><Run Text="ⒸUTOP SOFTWARE Inc.2020-2021" /></TextBlock>
+        </Border>
+    </Grid>
+    
+</metro:MetroWindow>
+    
+    

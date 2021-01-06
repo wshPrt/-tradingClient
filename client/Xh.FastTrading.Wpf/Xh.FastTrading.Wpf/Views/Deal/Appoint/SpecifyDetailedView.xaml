@@ -1,0 +1,125 @@
+﻿<Metro:UserControl   x:Class="Xh.FastTrading.Wpf.Views.SpecifyDetailedView"
+             xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views"
+             mc:Ignorable="d" 
+             DataContext="{Binding Source={StaticResource Locator},Path= Appoint}"
+             Style="{DynamicResource UserControl_Shadow}">
+    
+    <UserControl.Resources>
+        <!--Button 样式-->
+        <Style x:Key="BtnInfoStyle" TargetType="Button">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#0097A7"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <TextBlock Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0097A7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch"  Margin="1,10,0,0" >
+                <Label Content="持仓证券:"  HorizontalAlignment="Left" Foreground="Black" FontSize="18" VerticalAlignment="Center"/>
+                <TextBox x:Name="positionSecurities" FontSize="17" Text="{Binding ValidateUI.PositionSecurities}"  Width="200"/>
+                <Label Content="买卖方向:"  HorizontalAlignment="Left" Foreground="Black" FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <ComboBox x:Name="buySellId" 
+                          FontSize="16" 
+                          SelectedIndex="0" 
+                          Width="200"
+                          ItemsSource="{Binding Path=BuySellType}"
+                          SelectedItem="{Binding Path=SbuySellType}"
+                          DisplayMemberPath="Name">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding DirectionCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+                <Label Content="指定账户:"  HorizontalAlignment="Left" Foreground="Black" FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <ComboBox x:Name="appointAccount" SelectedIndex="0"  Width="200"
+                    ItemsSource="{Binding CmbListAppoint}"
+                    SelectedItem="{Binding CmbItemAppoint,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                   DisplayMemberPath="AppointName">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="80" Width="320"
+                        VerticalAlignment="Center" >
+                <Label Content="委托价格:"  HorizontalAlignment="Left" Foreground="#0097A7" 
+                       FontSize="15" VerticalAlignment="Center"/>
+                <TextBox  HorizontalAlignment="Left" VerticalAlignment="Center" 
+                         FontSize="15" Style="{DynamicResource TextBoxStyle}"
+                         Width="310" Margin="-70,54,0,0" Height="26"
+                         Text="{Binding ValidateUI.SingleTicketMarketValue}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="325,-75,0,0">
+                <TextBox Width="310"  HorizontalAlignment="Left" VerticalAlignment="Center"
+                         Foreground="#A1A28D" Margin="3,48.5,0,18" 
+                         Style="{StaticResource TextBoxStyle}" 
+                         Tag="委托数量:" FontSize="20"
+                         Text="{Binding ValidateUI.SingleTicketAmount}"/>
+                <Button Content="{Binding ValidateUI.BtnName}" 
+                        Background="#E5E5E5" 
+                        HorizontalAlignment="Right"
+                        Height="40" 
+                        Width="230" 
+                        VerticalAlignment="Stretch"
+                        Margin="40,15,5,5"
+                        Style="{StaticResource BtnInfoStyle}" 
+                        Command="{Binding BuyCommand}"/>
+            </StackPanel>
+            <StackPanel  Margin="2 -10">
+                <ScrollViewer
+                    BorderBrush="Transparent" 
+                                BorderThickness="0" 
+                                Style="{DynamicResource for_scrollviewer}"  
+                                VerticalScrollBarVisibility="Auto" >
+
+                        <DataGrid x:Name="dataGridFert"  
+                                  AutoGenerateColumns="False"
+                                  GridLinesVisibility="None"
+                                  RowHeaderWidth="0" 
+                                  CanUserDeleteRows="False"
+                                  IsReadOnly="True"
+                                  CanUserAddRows="False"
+                                  Width="6000"
+                                  ItemsSource="{Binding List,Mode=TwoWay}"
+                                  SelectedItem="{Binding SelectedRow}">
+                            <DataGrid.Columns>
+                            <DataGridTextColumn Header="账号代码" Width="auto" Binding="{Binding AccountCode}" />
+                               <DataGridTextColumn Header="证券代码" Width="auto" Binding="{Binding SecuritiesCode}"/>
+                                <DataGridTextColumn Header="单票数量" Width="auto" Binding="{Binding SingleTicketAmount}"/>
+                                <DataGridTextColumn Header="单票今买" Width="auto" Binding="{Binding SingleTicketBuy}"/>
+                                <DataGridTextColumn Header="单票今卖" Width="auto" Binding="{Binding SingleTicketSell}"/>
+                                <DataGridTextColumn Header="单票可卖" Width="auto" Binding="{Binding SingleTicketMarketable}"/>
+                                <DataGridTextColumn Header="单票市值" Width="auto" Binding="{Binding SingleTicketMarketValue}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Metro:UserControl>

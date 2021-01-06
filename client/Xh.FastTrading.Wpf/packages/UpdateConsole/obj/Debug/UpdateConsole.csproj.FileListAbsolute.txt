@@ -1,0 +1,14 @@
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\UpdateConsole.exe.config
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\UpdateConsole.exe
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\UpdateConsole.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\AutoUpdate.exe
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\AutoUpdate.pdb
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\AutoUpdate.exe.config
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\bin\Debug\Newtonsoft.Json.xml
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\obj\Debug\UpdateConsole.csprojAssemblyReference.cache
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\obj\Debug\UpdateConsole.csproj.CoreCompileInputs.cache
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\obj\Debug\UpdateConsole.csproj.CopyComplete
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\obj\Debug\UpdateConsole.exe
+D:\Work\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\Xh.FastTrading.Wpf\UpdateConsole\obj\Debug\UpdateConsole.pdb

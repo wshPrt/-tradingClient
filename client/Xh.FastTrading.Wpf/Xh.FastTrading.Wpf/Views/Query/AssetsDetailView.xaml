@@ -1,0 +1,85 @@
+﻿<Metro:UserControl x:Class="Xh.FastTrading.Wpf.Views.AssetsDetailView"
+             xmlns:Metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views"
+             DataContext="{Binding Source={StaticResource Locator},Path=Asets}"
+             mc:Ignorable="d" 
+             Style="{DynamicResource UserControl_Shadow}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto" ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" Width="auto" Margin="2,5,0,0" >
+            <StackPanel Orientation="Horizontal" Width="211" HorizontalAlignment="Left"  VerticalAlignment="Top" Background="#E5E5E5" Height="35" >
+                <Label Content="余额 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6" />
+                <Label Content="{Binding  ValidateUI.Balance}" Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10 5 5 5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="211" HorizontalAlignment="Left"  VerticalAlignment="Stretch"  Margin="230 -35 0 0" Background="#E5E5E5" Height="35" >
+                <Label Content="可用 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6" />
+                <Label  Content="{Binding ValidateUI.Available}"  Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10,5,5,5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="211" HorizontalAlignment="Left"  VerticalAlignment="Stretch"  Margin="450 -35 0 0" Background="#E5E5E5" Height="35" >
+                <Label Content="市值 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6" />
+                <Label Content="{Binding ValidateUI.Market}"  Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10,5,5,5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  VerticalAlignment="Stretch"  Margin="450 -35 0 0" Background="#E5E5E5" Height="35" >
+                <Label Content="资产 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6" />
+                <Label Content="{Binding ValidateUI.Assets}" Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10,5,5,5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="211" HorizontalAlignment="Left"  VerticalAlignment="Stretch"  Margin="670 -35 0 0" Background="#E5E5E5" Height="35" >
+                <Label Content="盈亏 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6" />
+                <Label Content="{Binding ValidateUI.ProfitLoss}"  Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10,5,5,5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="211" HorizontalAlignment="Left"  VerticalAlignment="Stretch"  Margin="890 -35 0 0" Background="#E5E5E5" Height="35" >
+                <Label Content="规模 :"  HorizontalAlignment="Left" Width="100"  VerticalAlignment="Stretch" Margin="2 6"/>
+                <Label Content="{Binding ValidateUI.Scale}" Foreground="Gray" Background="#E5E5E5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="10,5,5,5" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left"  Margin="0 5"  Orientation="Vertical" >
+            <ScrollViewer 
+                      BorderBrush="Transparent" 
+                      BorderThickness="0" 
+                      Style="{DynamicResource for_scrollviewer}" 
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto" Height="850" Width="1787">
+                <DataGrid Grid.Row="1" 
+                          x:Name="dataGridFert" 
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="None"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Stretch"
+                          IsReadOnly="True"
+                          RowHeaderWidth="0"
+                          CanUserDeleteRows="False" 
+                          CanUserAddRows="False"
+                          Width="1799"
+                          ItemsSource="{Binding List}" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="证券代码" Width="auto" Binding="{Binding SecuritiesCode}"/>
+                        <DataGridTextColumn Header="证券名称" Width="auto" Binding="{Binding ScuritiesName}"/>
+                        <DataGridTextColumn Header="证券数量" Width="auto" Binding="{Binding SecuritiesAmount}"/>
+                        <DataGridTextColumn Header="可卖数量" Width="auto" Binding="{Binding MarketableAmount}"/>
+                        <DataGridTextColumn Header="成本" Width="auto" Binding="{Binding CostPrice}"/>
+                        <DataGridTextColumn Header="当前价" Width="auto" Binding="{Binding CurrentPrice}"/>
+                        <DataGridTextColumn Header="亏盈比例" Width="auto" Binding="{Binding ProfitLossRatio}"/>
+                        <DataGridTextColumn Header="最新市值" Width="auto" Binding="{Binding MarketValue}"/>
+                        <DataGridTextColumn Header="今买数量" Width="auto" Binding="{Binding BuyAmount}"/>
+                        <DataGridTextColumn Header="今买金额" Width="auto" Binding="{Binding BuyAmountMoney}"/>
+                        <DataGridTextColumn Header="今买均价" Width="auto" Binding="{Binding AveragePrice}"/>
+                        <DataGridTextColumn Header="今卖数量" Width="auto" Binding="{Binding SellAmount}"/>
+                        <DataGridTextColumn Header="今卖金额" Width="auto" Binding="{Binding SellAmountMoney}"/>
+                        <DataGridTextColumn Header="今卖均价" Width="auto" Binding="{Binding SellAveragePrice}"/>
+                        <DataGridTextColumn Header="主账号" Width="auto" Binding="{Binding Account}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Metro:UserControl>

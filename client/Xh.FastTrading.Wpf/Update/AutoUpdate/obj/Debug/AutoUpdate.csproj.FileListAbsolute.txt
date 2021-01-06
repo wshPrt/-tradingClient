@@ -1,0 +1,15 @@
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\bin\Debug\AutoUpdate.exe.config
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\bin\Debug\AutoUpdate.exe
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\bin\Debug\AutoUpdate.pdb
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\UpdateView.g.cs
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\App.g.cs
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate_MarkupCompile.cache
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate_MarkupCompile.lref
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\UpdateView.baml
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.g.resources
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.Properties.Resources.resources
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.csproj.GenerateResource.cache
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.csproj.CoreCompileInputs.cache
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.csproj.CopyComplete
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.exe
+C:\Users\zhouh\source\repos\AutoUpdate.Net\AutoUpdate\obj\Debug\AutoUpdate.pdb

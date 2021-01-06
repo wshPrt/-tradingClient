@@ -1,0 +1,59 @@
+﻿<metro:UserControl  xmlns:metro="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+              x:Class="Xh.FastTrading.Wpf.Views.SellDetailedView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             DataContext="{Binding Source={StaticResource Locator},Path=Sell}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="800"
+             Style="{DynamicResource UserControl_Shadow}">
+    <Grid>
+        <ScrollViewer BorderBrush="Transparent" 
+                      BorderThickness="0" 
+                      Style="{DynamicResource for_scrollviewer}"  
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto" >
+            <StackPanel Orientation="Vertical" Margin="0,5,45,0">
+                <DataGrid x:Name="dataGridFert"
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="None"
+                          IsReadOnly="True"
+                          BorderThickness="0"
+                          RowHeaderWidth="0" 
+                          CanUserDeleteRows="False" 
+                          CanUserAddRows="False" 
+                          ItemsSource="{Binding List}"
+                          SelectedItem="{Binding SelectedRow}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="证券代码" Width="auto" Binding="{Binding SecuritiesCode}" />
+                        <DataGridTextColumn Header="证券名称" Width="auto" Binding="{Binding SecuritiesName}"/>
+                        <DataGridTextColumn Header="证券数量" Width="auto" Binding="{Binding SecuritiesAmount}"/>
+                        <DataGridTextColumn Header="可卖数量" Width="auto" Binding="{Binding MarketableAmount}"/>
+                        <DataGridTextColumn Header="成本价" Width="auto" Binding="{Binding CostPrice}"/>
+                        <DataGridTextColumn Header="当前价" Width="auto" Binding="{Binding CurrentPrice}"/>
+                        <DataGridTextColumn Header="盈亏比例" Width="auto" Binding="{Binding ProfitLossRatio}"/>
+                        <DataGridTextColumn Header="浮动盈亏" Width="auto" Binding="{Binding FloatProfitLoss}"/>
+                        <DataGridTextColumn Header="最新市值" Width="auto" Binding="{Binding NewestMarketValue}"/>
+                        <DataGridTextColumn Header="今天数量" Width="auto" Binding="{Binding BuyAmount}"/>
+                        <DataGridTextColumn Header="今天金额" Width="auto" Binding="{Binding BuyMoneyAmount}"/>
+                        <DataGridTextColumn Header="今买均价" Width="auto" Binding="{Binding BuyAveragePrice}"/>
+                        <DataGridTextColumn Header="今卖数量" Width="auto" Binding="{Binding SellAmount}"/>
+                        <DataGridTextColumn Header="今卖金额" Width="auto" Binding="{Binding SellMoneyAmount}"/>
+                        <DataGridTextColumn Header="今卖均价" Width="auto" Binding="{Binding SellAveragePrice}"/>
+                        <DataGridTextColumn Header="主账号" Width="auto" Binding="{Binding Account}"/>
+                    </DataGrid.Columns>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseLeftButtonDown">
+                            <mvvm:EventToCommand Command="{Binding SelectedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</metro:UserControl>

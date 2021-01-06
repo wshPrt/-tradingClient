@@ -1,0 +1,62 @@
+﻿<Window x:Class="Xh.FastTrading.Wpf.Views.SystemManage.UserManageUserInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xh.FastTrading.Wpf.Views.SystemManage"
+             DataContext="{Binding Source={StaticResource Locator},Path=ValidateException}"
+             xmlns:event="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:behaviors="clr-namespace:Xh.FastTrading.Wpf.Common.Untils"
+             mc:Ignorable="d" 
+             WindowStyle="None"
+             Height="384" Width="325"
+             >
+    <event:Interaction.Behaviors>
+        <behaviors:WindowCloseBehaviour Close="{Binding ToClose}"/>
+    </event:Interaction.Behaviors>
+
+    <DockPanel>
+        <Grid  Background="White" >
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="384">
+                <TextBlock Text="用 户 信 息" x:Name="msg"  FontSize="20"  Foreground="Gray" Margin="10,10,0,0"/>
+                <Border  BorderBrush="LightGray" BorderThickness="0,0,0,1" Width="320" Margin="0,10,0,0"/>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="299" Width="320">
+                    <TextBlock Text="登录名" Foreground="#00BCD4" Margin="15" FontSize="13"/>
+                    <TextBox x:Name="txtLogin" Text="{Binding ValidateUI.UserName}" BorderThickness="0" BorderBrush="{x:Null}" Margin="10,-5,15,0" VerticalAlignment="Top">
+                        <!--<TextBox.Text>
+                            <Binding Path="LoginName" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <ExceptionValidationRule></ExceptionValidationRule>
+                            </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>-->
+                    </TextBox>
+                    <Border BorderBrush="LightBlue" BorderThickness="1" Margin="10,0" />
+                    <TextBox Tag="姓名" x:Name="txtUser" Text="{Binding ValidateUI.Name}" Style="{DynamicResource TextBoxStyle}" Margin="10,25,15,0" FontSize="13" Foreground="LightGray" VerticalAlignment="Center"  Height="28" >
+                        <!--<TextBox.Text>
+                            <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <ExceptionValidationRule></ExceptionValidationRule>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>-->
+                    </TextBox>
+                    <TextBox Tag="手机" x:Name="txtPhone" Text="{Binding ValidateUI.Phone,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource TextBoxStyle}" Margin="10,25,15,0" FontSize="13" Foreground="LightGray" 
+                             VerticalAlignment="Center"  Height="28"></TextBox>
+                    <TextBox Tag="密码" x:Name="txtPwd" Style="{StaticResource TextBoxStyle}" Margin="10,25,15,0" FontSize="13" Foreground="LightGray" 
+                             VerticalAlignment="Center"  Height="28"
+                             Text="{Binding ValidateUI.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"/>
+                    <TextBox Tag="确认密码" x:Name="txtPwd2" Style="{StaticResource TextBoxStyle}" Margin="10,25,15,0" FontSize="13" Foreground="LightGray" 
+                             VerticalAlignment="Center"  Height="28" 
+                             Text="{Binding ValidateUI.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Width="154" Margin="0 -12">
+                    <Button x:Name="btnCancel" Style="{StaticResource BtnInfoStyle}" Click="btnCancel_Click" Content="取 消" Height="30" Foreground="White" HorizontalAlignment="Left"  Background="#00BCD4" Width="70" />
+                    <Button  Content="确 定" x:Name="btnConfirm" Style="{StaticResource BtnInfoStyle}"  Foreground="White" HorizontalAlignment="Left"  Background="#FF4081" Width="70" Height="30" Margin="5,0,0,0" 
+                             Command="{Binding AddCommand}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
